@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription — IT Training Center</title>
+<meta name="description" content="Inscrivez-vous à une formation chez IT Training Center (Ets. ASSA), Bukavu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Logo Ets. ASSA">
+      <span class="brand-text">IT Training Center<small>Ets. ASSA — Bukavu</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="formations.html">Formations</a>
+      <a href="apropos.html">Qui sommes-nous</a>
+      <a href="services.html">Services</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="inscription.html" class="btn btn-outline" aria-current="page">S'inscrire</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Inscription</p>
+      <h1>Inscrivez-vous à une formation</h1>
+      <p>Remplissez ce formulaire et notre équipe vous recontactera pour confirmer votre place et les modalités.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width:640px;">
+      <form class="contact-form" name="inscription" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="inscription">
+        <p style="display:none;">
+          <label>Ne pas remplir : <input name="bot-field"></label>
+        </p>
+
+        <div class="form-row">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+243 ..." required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="formation">Formation souhaitée</label>
+          <select id="formation" name="formation" required>
+            <option value="">— Choisir une formation —</option>
+            <option value="MikroTik Certified Network Associate">MikroTik Certified Network Associate</option>
+            <option value="Cisco Certified Network Associate">Cisco Certified Network Associate</option>
+            <option value="Ubiquiti UniFi">Ubiquiti UniFi</option>
+            <option value="Enterprise Network Engineering">Enterprise Network Engineering</option>
+            <option value="Windows Server Administration">Windows Server Administration</option>
+            <option value="Cybersecurity Fundamentals">Cybersecurity Fundamentals</option>
+            <option value="Autre / je ne sais pas encore">Autre / je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message (optionnel)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Disponibilités, questions particulières..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Envoyer mon inscription</button>
+        <p class="form-note">Votre demande est envoyée directement à notre équipe. Nous vous recontacterons par téléphone ou e-mail pour confirmer votre inscription.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Logo Ets. ASSA">
+          <span>IT Training Center</span>
+        </div>
+        <p style="color:#aebdca; max-width:32ch;">Formations réseaux, cybersécurité et cloud — Bukavu, RD Congo.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="apropos.html">Qui sommes-nous</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="inscription.html">S'inscrire</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+243994201684">+243 994 201 684</a></li>
+          <li><a href="mailto:etsassa.itc@gmail.com">etsassa.itc@gmail.com</a></li>
+          <li><a href="contact.html">Nous écrire</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Adresse</h4>
+        <p style="color:#aebdca;">N° 20 Av Lundula / place Mulamba, Ibanda, Bukavu, Sud-Kivu, RD Congo</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> IT Training Center — Ets. ASSA</span>
+      <span>Réseaux · Systèmes · Sans-fil · Cybersécurité · Fibre Optique · Cloud</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/chat-widgets.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

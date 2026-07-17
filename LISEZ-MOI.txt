@@ -1,0 +1,100 @@
+SITE WEB — IT TRAINING CENTER (Ets. ASSA)
+==========================================
+
+CE QUE VOUS AVEZ REÇU
+----------------------
+Un site web de 5 pages, prêt à l'emploi :
+  - index.html       → Accueil
+  - formations.html  → Formations / Catalogue
+  - apropos.html     → Qui sommes-nous
+  - services.html    → Services professionnels
+  - contact.html     → Contact
+
+Tout le contenu vient de votre dépliant (coordonnées, formations, valeurs, etc.).
+Aucune installation, aucun code à écrire : c'est un simple dossier de fichiers.
+
+1. VOIR LE SITE TOUT DE SUITE (sur votre ordinateur)
+-----------------------------------------------------
+Double-cliquez sur le fichier "index.html". Il s'ouvre dans votre navigateur
+(Chrome, Edge, Firefox...). Vous pouvez naviguer entre les pages normalement.
+C'est utile pour vérifier le contenu avant de le mettre en ligne.
+
+2. METTRE LE SITE EN LIGNE (gratuit, sans compétence technique)
+-------------------------------------------------------------------
+La méthode la plus simple, sans créer de compte au départ :
+
+  1. Allez sur https://app.netlify.com/drop dans votre navigateur.
+  2. Faites glisser le DOSSIER ENTIER "website" (celui qui contient
+     index.html) directement sur la page.
+  3. En quelques secondes, Netlify vous donne une adresse du type
+     https://nom-au-hasard.netlify.app — votre site est en ligne !
+  4. Vous pouvez créer un compte gratuit ensuite pour renommer l'adresse
+     ou brancher un nom de domaine (ex. www.itainingcenter-bukavu.com)
+     que vous achetez séparément (chez Namecheap, Google Domains, etc.).
+
+Alternative : demandez à votre hébergeur web habituel (souvent utilisé
+pour l'email @gmail ou un futur nom de domaine) comment déposer ces
+fichiers via leur outil "gestionnaire de fichiers" ou FTP — la personne
+qui gère votre hébergement saura quoi faire avec ce dossier tel quel.
+
+3. LE FORMULAIRE DE CONTACT
+-----------------------------
+Ce site n'a pas de serveur (donc pas de coût d'hébergement caché).
+Résultat : le formulaire de la page Contact n'envoie pas le message
+"en silence" — il ouvre simplement la messagerie e-mail habituelle du
+visiteur (Gmail, Outlook...) avec le message déjà rempli, prêt à envoyer
+à etsassa.itc@gmail.com. C'est volontaire et normal.
+
+4. MODIFIER LE CONTENU PLUS TARD
+-----------------------------------
+Vous n'avez pas besoin de savoir coder : revenez simplement dans cette
+conversation (ou une nouvelle) et dites-moi ce qui doit changer, par
+exemple :
+  - « change le numéro de téléphone sur le site »
+  - « ajoute une nouvelle formation : ... »
+  - « remplace la photo de la page d'accueil »
+Je modifierai directement les fichiers pour vous.
+
+5. STRUCTURE DES FICHIERS (pour information)
+-----------------------------------------------
+  css/style.css   → tous les styles (couleurs, polices, mise en page)
+  js/main.js      → le menu mobile et le formulaire de contact
+  js/gallery.js   → affiche automatiquement les photos/vidéos de data/gallery.json
+  js/chat-widgets.js → bouton WhatsApp flottant + chat en direct (Tawk.to)
+  assets/         → le logo et les images
+  data/gallery.json → le contenu de la page Galerie (modifiable via /admin)
+  admin/          → panneau d'administration (Decap CMS) pour publier photos/vidéos
+
+Ne renommez pas ces dossiers/fichiers : les pages les référencent par leur
+nom exact.
+
+6. PUBLIER DES PHOTOS/VIDÉOS SANS MOI (panneau d'administration)
+-------------------------------------------------------------------
+Un guide séparé (« Guide Decap CMS ») explique comment connecter le site
+à GitHub et Netlify pour activer le panneau d'administration à l'adresse
+votresite.netlify.app/admin. Une fois connecté, vous pouvez y ajouter des
+photos et des vidéos vous-même, à tout moment, sans passer par moi.
+
+7. CHAT AVEC LES VISITEURS
+------------------------------
+Le site inclut désormais deux moyens de discuter avec vos visiteurs :
+
+  a) Bouton WhatsApp flottant (déjà actif, aucun réglage requis)
+     Un bouton vert en bas à droite de chaque page ouvre directement une
+     conversation WhatsApp avec le numéro +243 994 201 684.
+
+  b) Chat en direct sur le site (Tawk.to — à activer, gratuit)
+     Un guide séparé (« Guide Chat en direct Tawk.to ») explique comment
+     créer un compte gratuit et l'activer en 5 minutes.
+
+8. FORMULAIRE D'INSCRIPTION EN LIGNE
+-----------------------------------------
+Une nouvelle page « Inscription » (inscription.html) permet aux visiteurs
+de s'inscrire à une formation (nom, téléphone, e-mail, formation souhaitée,
+message). Elle utilise Netlify Forms : Netlify capte automatiquement les
+réponses, consultables dans le tableau de bord de votre projet, onglet
+« Forms ». Un guide séparé (« Guide Formulaire Inscription ») explique
+comment consulter les inscriptions et activer une notification par e-mail
+à chaque nouvelle demande.
+IMPORTANT : ce formulaire ne fonctionne que sur un site déployé depuis
+GitHub (comme « ittrainingcenter »), pas via un simple Netlify Drop.

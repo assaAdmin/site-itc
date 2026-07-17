@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "title": "Bienvenue dans la galerie",
+      "type": "image",
+      "file": "assets/hero.jpg",
+      "description": "Ajoutez vos premières photos et vidéos depuis le panneau d'administration (/admin).",
+      "date": "2026-07-17"
+    }
+  ]
+}
