@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie — IT Training Center</title>
+<meta name="description" content="Photos et vidéos des formations et du laboratoire d'IT Training Center (Ets. ASSA), Bukavu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Logo Ets. ASSA">
+      <span class="brand-text">IT Training Center<small>Ets. ASSA — Bukavu</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="formations.html">Formations</a>
+      <a href="apropos.html">Qui sommes-nous</a>
+      <a href="services.html">Services</a>
+      <a href="galerie.html" aria-current="page">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Galerie</p>
+      <h1>Photos &amp; vidéos</h1>
+      <p>Un aperçu de nos formations, de notre laboratoire et de nos participants sur le terrain.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div id="gallery-grid" class="gallery-grid"></div>
+      <p id="gallery-empty">Aucune photo ou vidéo n'a encore été publiée.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Logo Ets. ASSA">
+          <span>IT Training Center</span>
+        </div>
+        <p style="color:#aebdca; max-width:32ch;">Formations réseaux, cybersécurité et cloud — Bukavu, RD Congo.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="apropos.html">Qui sommes-nous</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+243994201684">+243 994 201 684</a></li>
+          <li><a href="mailto:etsassa.itc@gmail.com">etsassa.itc@gmail.com</a></li>
+          <li><a href="contact.html">Nous écrire</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Adresse</h4>
+        <p style="color:#aebdca;">N° 20 Av Lundula / place Mulamba, Ibanda, Bukavu, Sud-Kivu, RD Congo</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> IT Training Center — Ets. ASSA</span>
+      <span>Réseaux · Systèmes · Sans-fil · Cybersécurité · Fibre Optique · Cloud</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/chat-widgets.js"></script>
+<script src="js/gallery.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
