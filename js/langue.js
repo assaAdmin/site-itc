@@ -109,8 +109,10 @@
       b.addEventListener('click', function () {
         if (l === langue) return;
         memoriser(l);
-        // on recharge la page sans le ?lang= éventuel
-        location.href = location.pathname + location.hash;
+        // On recharge la page dans la nouvelle langue.
+        // (Le « ?lang=… » oblige le navigateur à recharger : sur un site d'une
+        //  seule page, changer seulement le « #partie » ne recharge rien.)
+        location.replace(location.pathname + '?lang=' + l + location.hash);
       });
       boite.appendChild(b);
     });
