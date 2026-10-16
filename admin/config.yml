@@ -9,8 +9,8 @@
 backend:
   name: github
   # ⚠️ Doit correspondre EXACTEMENT à l'adresse du dépôt :
-  #    github.com/assaAdmin/ittrainingcenter  →  assaAdmin/ittrainingcenter
-  repo: assaAdmin/ittrainingcenter
+  #    github.com/assaAdmin/site-itc  →  assaAdmin/site-itc
+  repo: assaAdmin/site-itc
   branch: main
 
 # Où sont rangés les photos et vidéos envoyées depuis l'admin

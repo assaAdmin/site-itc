@@ -75,6 +75,14 @@
       </div>
       <div class="hero-photo reveal">
         <img src="assets/hero.jpg" alt="Formateur IT Training Center devant un écran, avec des participants en formation">
+        <!-- Petite console de routeur (décor) : les lignes apparaissent une à une au chargement -->
+        <div class="terminal" aria-hidden="true">
+          <p class="t-barre"><span></span><span></span><span></span>labo-mikrotik</p>
+          <p class="t-l t1"><b>[admin@ITC-Bukavu] &gt;</b> /ping 8.8.8.8 count=3</p>
+          <p class="t-l t2">sent=3 received=3 packet-loss=0%</p>
+          <p class="t-l t3"><b>[admin@ITC-Bukavu] &gt;</b> /system identity set name=pret-pour-le-terrain</p>
+          <p class="t-l t4"><b>[admin@ITC-Bukavu] &gt;</b> <i class="t-curseur"></i></p>
+        </div>
       </div>
     </div>
   </section>
@@ -91,45 +99,56 @@
     </div>
   </div>
 
-  <!-- POURQUOI NOUS CHOISIR -->
-  <section>
-    <div class="container">
+  <!-- NOTRE DIFFÉRENCE (section sombre, liste avec coches) -->
+  <section class="sombre">
+    <div class="container difference">
       <div class="section-head reveal">
         <p class="eyebrow">Pourquoi choisir IT Training Center ?</p>
-        <h2>Une pédagogie tournée vers la pratique</h2>
-        <p>Notre philosophie : 20% théorie, 80% pratique — pour former des professionnels immédiatement opérationnels.</p>
+        <h2>Notre différence : une formation tournée vers la pratique</h2>
+        <p>Notre philosophie : 20 % de théorie, 80 % de pratique, pour former des professionnels opérationnels dès le premier jour.</p>
+        <a href="formations.html" class="btn btn-primary">Voir nos formations</a>
       </div>
-      <div class="grid grid-3">
-        <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
-          <h3>Laboratoire professionnel</h3>
-          <p>Le Network Innovation &amp; Practice Lab, équipé pour des mises en situation réelles.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <h3>Technologies reconnues</h3>
-          <p>MikroTik, Cisco, Ubiquiti, Windows Server, Linux, Cybersécurité — les outils utilisés sur le terrain.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l4-9 4 5 3-6 5 10H4z"/></svg></div>
-          <h3>Scénarios réels</h3>
-          <p>Entreprises, ISP, hôpitaux, écoles, ONG — des cas inspirés d'environnements concrets.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1.5-4 4-5.5 7-5.5S18.5 16 20 20"/></svg></div>
-          <h3>Accompagnement personnalisé</h3>
-          <p>Des formateurs expérimentés, des groupes restreints de 4 à 8 participants.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-          <h3>Évaluation par compétences</h3>
-          <p>Labos, études de cas et projet final — une préparation directe aux certifications internationales.</p>
-        </div>
-        <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9l8-5 8 5v10"/><path d="M9 19v-6h6v6"/></svg></div>
-          <h3>Expertise de terrain</h3>
-          <p>Une communauté d'anciens apprenants, et une expertise issue de nos services professionnels.</p>
-        </div>
+      <ul class="liste-coches reveal">
+          <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Un vrai laboratoire</h3><p>Le Network Innovation &amp; Practice Lab : 5 laboratoires équipés de matériel professionnel.</p></div></li>
+          <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Des petits groupes</h3><p>4 à 8 participants, pour que chacun pratique et soit suivi.</p></div></li>
+          <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Les technologies du terrain</h3><p>MikroTik, Cisco, Ubiquiti, Windows Server, Linux et cybersécurité.</p></div></li>
+          <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Des scénarios réels</h3><p>Des cas tirés d'entreprises, de fournisseurs d'accès internet, d'hôpitaux, d'écoles et d'ONG.</p></div></li>
+          <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Une évaluation par compétences</h3><p>Labos, études de cas et projet final, pour préparer les certifications internationales.</p></div></li>
+          <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Des formateurs de terrain</h3><p>Une expertise issue de nos propres chantiers réseau et de nos services aux entreprises.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NOTRE MÉTHODE : la devise s'allume mot par mot quand on fait défiler la page (js/effets.js) -->
+  <section class="sombre methode">
+    <div class="container methode-grille">
+      <div class="methode-titre">
+        <p class="eyebrow">Notre méthode</p>
+        <h2 class="devise" aria-label="Comprendre. Pratiquer. Expérimenter. Maîtriser.">
+          <span>Comprendre.</span> <span>Pratiquer.</span> <span>Expérimenter.</span> <span>Maîtriser.</span>
+        </h2>
+      </div>
+      <div class="etapes">
+          <div class="etape reveal">
+            <span class="etape-num">01</span>
+            <h3>Comprendre</h3>
+            <p>Les bases essentielles, expliquées simplement avec des schémas et des cas concrets : c'est notre 20 % de théorie.</p>
+          </div>
+          <div class="etape reveal">
+            <span class="etape-num">02</span>
+            <h3>Pratiquer</h3>
+            <p>Sur du vrai matériel MikroTik, Cisco et Ubiquiti, en groupes de 4 à 8 personnes.</p>
+          </div>
+          <div class="etape reveal">
+            <span class="etape-num">03</span>
+            <h3>Expérimenter</h3>
+            <p>Des pannes, des attaques et des déploiements tirés de situations réelles, à résoudre en équipe.</p>
+          </div>
+          <div class="etape reveal">
+            <span class="etape-num">04</span>
+            <h3>Maîtriser</h3>
+            <p>Évaluation par labos, études de cas et projet final, puis préparation aux certifications internationales.</p>
+          </div>
       </div>
     </div>
   </section>
@@ -147,29 +166,37 @@
     </div>
   </section>
 
-  <!-- DOMAINES D'EXPERTISE -->
-  <section class="bg-alt">
+  <!-- DOMAINES D'EXPERTISE (section sombre, mot-clé en haut à droite de chaque carte) -->
+  <section class="sombre">
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Domaines d'expertise</p>
         <h2>Un socle technique complet</h2>
       </div>
       <div class="grid grid-4">
-        <div class="card on-orange reveal">
+        <div class="card carte-domaine reveal">
           <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M12 12L4 6M12 12l8-6M12 12l-8 6M12 12l8 6"/></svg></div>
-          <h3>Réseaux &amp; Systèmes</h3>
+          <span class="mot-cle">Réseaux</span>
+          <h3>Réseaux &amp; systèmes</h3>
+          <p>Routage, commutation, Windows Server et Linux.</p>
         </div>
-        <div class="card on-orange reveal">
+        <div class="card carte-domaine reveal">
           <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Sans Fil &amp; Fibre Optique</h3>
+          <span class="mot-cle">Sans fil</span>
+          <h3>Sans fil &amp; fibre optique</h3>
+          <p>Wi-Fi professionnel, liaisons radio et réseaux en fibre optique.</p>
         </div>
-        <div class="card on-orange reveal">
+        <div class="card carte-domaine reveal">
           <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l7 4v6c0 4.5-3 7.5-7 10-4-2.5-7-5.5-7-10V6l7-4z"/></svg></div>
+          <span class="mot-cle">Sécurité</span>
           <h3>Cybersécurité</h3>
+          <p>Sécurisation des réseaux, pare-feu et gestion des menaces.</p>
         </div>
-        <div class="card on-orange reveal">
+        <div class="card carte-domaine reveal">
           <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18a4 4 0 0 1-1-7.9 5 5 0 0 1 9.6-2A4.5 4.5 0 0 1 17 18H7z"/></svg></div>
-          <h3>Cloud Technologies</h3>
+          <span class="mot-cle">Cloud</span>
+          <h3>Technologies cloud</h3>
+          <p>Virtualisation, services cloud et outils numériques.</p>
         </div>
       </div>
     </div>
@@ -201,10 +228,20 @@
     </div>
   </section>
 
-  <!-- CITATION -->
-  <section class="quote-banner reveal">
+  <!-- NOS PARTENAIRES (pour en ajouter un : copier un bloc « partenaire ») -->
+  <section class="partenaires">
     <div class="container">
-      <blockquote>« Comprendre. Pratiquer. Expérimenter. Maîtriser. »</blockquote>
+      <div class="section-head reveal">
+        <p class="eyebrow">Nos partenaires</p>
+        <h2>Ils avancent avec nous</h2>
+      </div>
+      <div class="grille-partenaires">
+        <a class="partenaire reveal" href="https://primasecure.com/" target="_blank" rel="noopener">
+          <span class="partenaire-nom">Prima Secure</span>
+          <span class="partenaire-texte">Fournisseur de solutions de cybersécurité présent dans plusieurs pays d'Afrique, dont la RDC.</span>
+          <span class="partenaire-lien">primasecure.com</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -265,8 +302,11 @@
   </div>
 </footer>
 
+<script src="js/traduction-en.js"></script>
+<script src="js/langue.js"></script>
 <script src="js/main.js"></script>
 <script src="js/stats.js"></script>
+<script src="js/effets.js"></script>
 <script src="js/chat-widgets.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var titre = document.getElementById('stats-titre');
         if (titre && data.titre) titre.textContent = data.titre;
         var maj = document.getElementById('stats-maj');
-        if (maj && data.mise_a_jour) maj.textContent = 'Chiffres mis à jour le ' + dateFr(data.mise_a_jour);
+        if (maj && data.mise_a_jour) maj.textContent = (document.documentElement.lang === 'en')
+          ? 'Figures updated on ' + dateEn(data.mise_a_jour)
+          : 'Chiffres mis à jour le ' + dateFr(data.mise_a_jour);
 
         items.forEach(function (it) {
           var bloc = document.createElement('div');
@@ -80,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function pas(t) {
           if (!debut) debut = t;
           var avance = Math.min((t - debut) / duree, 1);
-          el.textContent = Math.round(cible * avance).toLocaleString('fr-FR') + el.dataset.suffixe;
+          el.textContent = Math.round(cible * avance).toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'fr-FR') + el.dataset.suffixe;
           if (avance < 1) requestAnimationFrame(pas);
         }
         requestAnimationFrame(pas);
@@ -91,6 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (entrees[0].isIntersecting) { io.disconnect(); lancer(); }
     }, { threshold: 0.3 });
     io.observe(conteneur);
+  }
+
+  function dateEn(iso) {
+    var mois = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var m = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})/);
+    return m ? (mois[parseInt(m[2], 10) - 1] + ' ' + parseInt(m[3], 10) + ', ' + m[1]) : iso;
   }
 
   function dateFr(iso) {

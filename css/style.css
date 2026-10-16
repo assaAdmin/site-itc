@@ -132,7 +132,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .nav-links a.btn { padding: 8px 18px; white-space: nowrap; }
 .nav-links a { white-space: nowrap; }
 /* Écrans moyens : liens plus rapprochés pour que le menu (avec « Solutions ») tienne sur une ligne */
-@media (min-width: 1001px) and (max-width: 1100px) { .nav-links { gap: 20px; } }
+@media (min-width: 1101px) and (max-width: 1180px) { .nav-links { gap: 20px; } }
 .nav-cta { display: none; }
 .nav-toggle {
   display: none;
@@ -140,9 +140,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy-900); margin: 5px 0; }
 
-@media (min-width: 1001px) { .nav-cta { display: inline-flex; } }
-/* Menu « hamburger » jusqu'à 1000 px de large (avant : 860 px), car le menu a maintenant un lien de plus */
-@media (max-width: 1000px) {
+@media (min-width: 1101px) { .nav-cta { display: inline-flex; } }
+/* Menu « hamburger » jusqu’à 1100 px de large (avant : 860 px), car le menu a maintenant un lien de plus */
+@media (max-width: 1100px) {
   .nav-toggle { display: block; }
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
@@ -549,3 +549,208 @@ h2 { letter-spacing: -0.01em; max-width: 30ch; }
 .value-chip { font-family: var(--font-body); font-weight: 500; background: var(--white); }
 
 @media (prefers-reduced-motion: reduce) { .tech-pill::before { animation: none; } }
+
+/* =====================================================================
+   RETOUCHE 2 — 16 octobre 2026 : cadres plus compacts, site plus vivant
+   ===================================================================== */
+
+/* --- Toutes les cartes de texte : plus compactes, icône à gauche du texte --- */
+.card:not(.gallery-card) {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  column-gap: 16px;
+  align-content: start;
+  padding: 20px 22px;
+  border-radius: 10px;
+}
+.card:not(.gallery-card) > * { grid-column: 2; }
+.card:not(.gallery-card) > .icon-circle { grid-column: 1; grid-row: 1 / span 8; margin: 0; }
+/* une carte sans icône utilise toute la largeur */
+.card:not(.gallery-card):not(:has(> .icon-circle)) { grid-template-columns: 1fr; }
+.card:not(.gallery-card):not(:has(> .icon-circle)) > * { grid-column: 1; }
+.icon-circle { width: 44px; height: 44px; border-radius: 10px; }
+.icon-circle svg { width: 21px; height: 21px; }
+.card h3 { font-size: 1.08rem; margin-bottom: 6px; }
+.card p, .card li { font-size: 0.93rem; }
+.card .eyebrow { margin-bottom: 6px; font-size: 0.7rem; }
+.card .diamond-list { gap: 8px; margin-top: 6px; }
+.grid { gap: 18px; }
+
+/* --- Accueil, « Pourquoi nous choisir » : liste ouverte, sans boîtes --- */
+.features { gap: 30px 40px; }
+.features .card:not(.gallery-card) { background: none; border: 0; box-shadow: none; padding: 0; }
+.features .card:not(.gallery-card):hover { border: 0; }
+.features .icon-circle { background: var(--orange); color: var(--white); }
+
+/* --- Domaines d'expertise (cartes « on-orange ») : tuiles bleu marine --- */
+.card.on-orange { background: var(--navy-900); border: 0; border-top: 0; border-left: 4px solid var(--orange); align-items: center; }
+.card.on-orange h3 { color: var(--white); margin: 0; }
+.card.on-orange:hover { border-left-color: var(--gold); }
+/* Domaines de la page Qui sommes-nous (« on-teal ») : tuiles claires compactes */
+.card.on-teal { border-top: 0; border-left: 4px solid var(--teal); align-items: center; }
+.card.on-teal h3 { margin: 0; }
+
+/* --- Fiches formations : plus serrées --- */
+.program-card { padding: 20px 22px; gap: 6px; border-radius: 10px; }
+.program-card h3 { font-size: 1.08rem; margin: 0; }
+.program-card p { font-size: 0.93rem; margin: 0; }
+
+/* --- Sections un peu moins hautes --- */
+section { padding: 76px 0; }
+.section-head { margin-bottom: 36px; }
+
+/* --- Console de routeur sur la photo de l'accueil --- */
+.terminal {
+  position: absolute; left: -34px; bottom: -46px; z-index: 3;
+  width: min(420px, 92%);
+  background: #06101b; border: 1px solid #23384f; border-radius: 10px;
+  padding: 0 0 14px; box-shadow: 0 24px 50px -20px rgba(0,0,0,0.8);
+  font-family: var(--font-mono); font-size: 0.76rem; line-height: 1.55;
+}
+.terminal p { margin: 0; padding: 0 16px; color: #9fb4c8; }
+.terminal b { color: #3ddc84; font-weight: 500; }
+.t-barre { display: flex; align-items: center; gap: 6px; padding: 9px 12px !important; margin-bottom: 10px !important; border-bottom: 1px solid #1b2c3f; font-size: 0.7rem; color: #6c8299 !important; }
+.t-barre span { width: 9px; height: 9px; border-radius: 50%; background: #e05a4f; }
+.t-barre span:nth-child(2) { background: var(--gold); }
+.t-barre span:nth-child(3) { background: #3ddc84; margin-right: 8px; }
+.t-l { opacity: 0; animation: t-ligne 0.01s forwards; }
+.t1 { animation-delay: 0.6s; } .t2 { animation-delay: 1.5s; } .t3 { animation-delay: 2.3s; } .t4 { animation-delay: 3.1s; }
+@keyframes t-ligne { to { opacity: 1; } }
+.t-curseur { display: inline-block; width: 8px; height: 14px; background: #3ddc84; vertical-align: -2px; animation: t-clign 1s steps(1) infinite; }
+@keyframes t-clign { 50% { opacity: 0; } }
+@media (max-width: 900px) {
+  .terminal { position: relative; left: auto; bottom: auto; width: 100%; margin-top: 14px; }
+  .hero-photo { padding-bottom: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .t-l { opacity: 1; animation: none; } .t-curseur { animation: none; } }
+/* petits ajustements */
+.card > .btn { justify-self: start; }
+.bg-navy .diamond-list li { color: #c9d5e0; }
+.card.on-orange > .icon-circle, .card.on-teal > .icon-circle { grid-row: auto; }
+.terminal { width: min(370px, 88%); bottom: -64px; left: -40px; }
+@media (max-width: 900px) { .terminal { left: auto; bottom: auto; width: 100%; } }
+
+/* =====================================================================
+   RETOUCHE 3 — 16 octobre 2026 (inspirée du site de notre partenaire)
+   En-tête flottant, sections sombres, méthode 01-04, partenaires
+   ===================================================================== */
+
+/* --- En-tête : une « pilule » sombre qui flotte au-dessus de la page --- */
+.site-header {
+  position: sticky; top: 12px; z-index: 50;
+  background: transparent; border: 0; backdrop-filter: none;
+  margin-bottom: -82px;              /* la pilule passe par-dessus le haut de page sombre */
+  padding: 0 16px;
+}
+.nav {
+  max-width: 1180px; padding: 10px 12px 10px 14px;
+  background: rgba(10, 22, 38, 0.86);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 999px;
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,0.7);
+}
+.brand img { height: 38px; border-radius: 50%; background: #fff; padding: 2px; }
+.brand-text { color: var(--white); }
+.brand-text small { color: var(--gold-light); }
+.nav-links a { color: #c3d0dc; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--white); }
+.nav-links a.btn-outline { background: var(--orange); border-color: var(--orange); color: var(--white); }
+.nav-links a.btn-outline:hover { background: #c96a11; border-color: #c96a11; }
+.nav-toggle span { background: var(--white); }
+/* les hauts de page sombres laissent la place à la pilule */
+.hero { padding-top: 170px; }
+.page-hero { padding-top: 150px; }
+@media (max-width: 1100px) {
+  .nav { border-radius: 22px; }
+  .nav-links { top: calc(100% + 8px); left: 0; right: 0; border-radius: 18px; background: rgba(10,22,38,0.97); border: 1px solid rgba(255,255,255,0.09); }
+  .nav-links a { color: #dbe4ec; }
+}
+@media (max-width: 620px) {
+  .hero { padding-top: 130px; }
+  .page-hero { padding-top: 120px; }
+  .brand-text small { display: none; }
+}
+
+/* --- Sections sombres (bleu nuit avec lueurs dorées) --- */
+.sombre {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(600px 300px at 90% 0%, rgba(212,168,67,0.10), transparent 70%),
+    radial-gradient(500px 300px at 0% 100%, rgba(44,122,140,0.16), transparent 70%),
+    var(--navy-950);
+  color: var(--white);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.sombre h2, .sombre h3 { color: var(--white); }
+.sombre p { color: #a9bccd; }
+.sombre .eyebrow { color: var(--gold); }
+.sombre .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); }
+.sombre .card:hover { border-color: rgba(212,168,67,0.5); }
+.sombre .icon-circle { background: rgba(212,168,67,0.12); color: var(--gold); border: 1px solid rgba(212,168,67,0.3); }
+.stats-band { background: var(--navy-950); }
+
+/* --- Sur-titres plus marqués --- */
+.eyebrow { font-weight: 500; letter-spacing: 0.16em; }
+
+/* --- Titres : apparition en fondu (flou puis net) --- */
+.section-head.reveal { filter: blur(8px); transition: opacity .8s ease, transform .8s ease, filter .8s ease; }
+.section-head.reveal.is-visible { filter: none; }
+
+/* --- Notre différence : titre à gauche, liste avec coches à droite --- */
+.difference { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.difference .section-head { margin: 0; position: sticky; top: 110px; }
+.difference .btn { margin-top: 10px; }
+.liste-coches { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.liste-coches li { display: grid; grid-template-columns: 30px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.liste-coches li:first-child { padding-top: 0; }
+.liste-coches h3 { font-size: 1.08rem; margin: 0 0 4px; }
+.liste-coches p { margin: 0; font-size: 0.94rem; }
+.coche { width: 26px; height: 26px; padding: 4px; border-radius: 8px; background: rgba(61,220,132,0.12); color: #3ddc84; margin-top: 1px; }
+@media (max-width: 900px) { .difference { grid-template-columns: 1fr; gap: 30px; } .difference .section-head { position: static; } }
+
+/* --- Notre méthode : la devise qui s'allume + 4 étapes numérotées --- */
+.methode-grille { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.devise { font-size: clamp(2.4rem, 5.2vw, 4.2rem); line-height: 1.08; max-width: none; }
+.devise span { color: rgba(255,255,255,0.16); transition: color .5s ease; }
+.devise span.allume { color: var(--white); }
+.devise span.allume:last-child { color: var(--gold); }
+.etapes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.etape { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 20px; }
+.etape-num { font-family: var(--font-mono); font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; }
+.etape h3 { margin: 8px 0 6px; font-size: 1.15rem; }
+.etape p { margin: 0; font-size: 0.92rem; }
+@media (max-width: 900px) { .methode-grille { grid-template-columns: 1fr; gap: 30px; } }
+@media (max-width: 560px) { .etapes { grid-template-columns: 1fr; } }
+
+/* --- Domaines : mot-clé en haut à droite de chaque carte --- */
+.carte-domaine { position: relative; padding-top: 22px; }
+.carte-domaine > .icon-circle { grid-row: 1 / span 4; }
+.mot-cle {
+  position: absolute; top: 14px; right: 14px;
+  font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); border: 1px solid rgba(212,168,67,0.35); border-radius: 999px; padding: 3px 9px;
+}
+.carte-domaine h3 { margin-top: 26px; }
+@media (max-width: 1100px) { .sombre .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .sombre .grid-4 { grid-template-columns: 1fr; } }
+
+/* --- Partenaires --- */
+.grille-partenaires { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.partenaire { display: flex; flex-direction: column; gap: 8px; padding: 26px 26px 24px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; border-left: 4px solid var(--navy-900); transition: border-color .2s ease; }
+.partenaire:hover { border-left-color: var(--orange); }
+.partenaire-nom { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--navy-900); letter-spacing: -0.01em; }
+.partenaire-texte { color: var(--ink-soft); font-size: 0.93rem; }
+.partenaire-lien { font-size: 0.85rem; font-weight: 600; color: var(--orange); margin-top: 4px; }
+@media (max-width: 620px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+
+/* --- Choix de la langue FR | EN (créé par js/langue.js) --- */
+.langue-choix { display: inline-flex; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 2px; margin-left: 14px; flex-shrink: 0; }
+.langue-choix button { background: none; border: 0; color: #a9bccd; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.06em; padding: 5px 9px; border-radius: 999px; cursor: pointer; }
+.langue-choix button[aria-pressed="true"] { background: var(--white); color: var(--navy-900); font-weight: 600; }
+.langue-choix button:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 1px; }
+@media (max-width: 1100px) { .langue-choix { margin-left: auto; margin-right: 8px; } }
+/* ordre dans l'en-tête : logo · menu · FR|EN · bouton menu mobile */
+.brand { order: 1; } .nav-links { order: 2; } .langue-choix { order: 3; } .nav-toggle { order: 4; }
+@media (max-width: 1100px) { .langue-choix { margin-left: auto; } }
+@media (min-width: 1101px) and (max-width: 1240px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.88rem; } }

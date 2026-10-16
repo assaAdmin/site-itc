@@ -108,3 +108,21 @@ GitHub (comme « ittrainingcenter »), pas via un simple Netlify Drop.
   Connexion à /admin : avec le compte GitHub (fournisseur OAuth GitHub
   installé dans Netlify). Netlify Identity n'est plus utilisé.
   Vidéos : fichier MP4 de moins de 50 Mo, sinon lien YouTube/Facebook.
+
+10. VERSION ANGLAISE (bouton FR | EN en haut de chaque page)
+------------------------------------------------------------
+  js/langue.js         → affiche le bouton FR | EN et traduit la page
+  js/traduction-en.js  → le dictionnaire : texte français → texte anglais
+  Le site s'ouvre toujours en français. Si le visiteur clique sur EN,
+  les autres pages restent en anglais jusqu'à la fermeture du navigateur. Lien direct vers la
+  version anglaise : https://ittrainingcenter.netlify.app/?lang=en
+  IMPORTANT : si vous changez ou ajoutez un texte en français dans une
+  page, ajoutez la même ligne dans js/traduction-en.js, par exemple :
+     "Nouveau texte en français": "New text in English",
+  Sinon ce texte restera en français sur la version anglaise.
+  Les textes publiés depuis /admin (galerie, parcours) restent en français.
+
+11. PARTENAIRES
+---------------
+  Section « Nos partenaires » sur l'accueil et Qui sommes-nous.
+  Pour ajouter un partenaire : copier un bloc <a class="partenaire">…</a>.
