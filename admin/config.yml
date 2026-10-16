@@ -1,51 +1,98 @@
+# =====================================================================
+#  PANNEAU D'ADMINISTRATION (Decap CMS) — IT Training Center
+#  Adresse : https://ittrainingcenter.netlify.app/admin
+#  Connexion : avec le compte GitHub qui possède le dépôt (assaAdmin).
+#  Chaque « Publier » enregistre la modification sur GitHub,
+#  puis Netlify remet le site à jour tout seul (1 à 2 minutes).
+# =====================================================================
+
 backend:
-  name: git-gateway
+  name: github
+  # ⚠️ Doit correspondre EXACTEMENT à l'adresse du dépôt :
+  #    github.com/assaAdmin/ittrainingcenter  →  assaAdmin/ittrainingcenter
+  repo: assaAdmin/ittrainingcenter
   branch: main
 
+# Où sont rangés les photos et vidéos envoyées depuis l'admin
 media_folder: "assets/gallery"
 public_folder: "/assets/gallery"
 
 publish_mode: simple
-
 locale: "fr"
 
 collections:
-  - name: "gallery"
+
+  # ---------- 1) GALERIE : photos et vidéos ----------
+  - name: "galerie"
     label: "Galerie (photos & vidéos)"
-    file: "data/gallery.json"
-    identifier_field: title
-    fields:
-      - label: "Éléments de la galerie"
-        name: "items"
-        widget: "list"
-        summary: "{{title}} — {{type}}"
+    files:
+      - name: "gallery"
+        label: "Photos et vidéos de la galerie"
+        file: "data/gallery.json"
         fields:
-          - label: "Titre"
-            name: "title"
-            widget: "string"
-          - label: "Type"
-            name: "type"
-            widget: "select"
-            options:
-              - { label: "Photo", value: "image" }
-              - { label: "Vidéo (lien YouTube / Facebook)", value: "video" }
-            default: "image"
-          - label: "Photo (si type = Photo)"
-            name: "file"
-            widget: "image"
-            required: false
-            hint: "Téléversez la photo ici. Laissez vide si vous ajoutez une vidéo."
-          - label: "Lien de la vidéo (si type = Vidéo)"
-            name: "video_url"
-            widget: "string"
-            required: false
-            hint: "Collez le lien YouTube ou Facebook de la vidéo. Laissez vide si vous ajoutez une photo."
-          - label: "Description"
-            name: "description"
-            widget: "text"
-            required: false
-          - label: "Date"
-            name: "date"
-            widget: "datetime"
-            format: "YYYY-MM-DD"
-            default: ""
+          - label: "Éléments de la galerie"
+            name: "items"
+            widget: "list"
+            label_singular: "élément"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                default: "image"
+                options:
+                  - { label: "Photo", value: "image" }
+                  - { label: "Vidéo courte (fichier MP4, moins de 50 Mo)", value: "video_file" }
+                  - { label: "Vidéo YouTube ou Facebook (lien)", value: "video" }
+              - label: "Photo (si type = Photo)"
+                name: "file"
+                widget: "image"
+                required: false
+                hint: "Choisissez la photo. Laissez vide pour une vidéo."
+              - label: "Fichier vidéo MP4 (si type = Vidéo courte)"
+                name: "video_file"
+                widget: "file"
+                required: false
+                hint: "Vidéo de moins de 50 Mo (environ 1 à 2 minutes). Pour une vidéo plus longue, mettez-la sur YouTube et utilisez le type « lien »."
+              - label: "Lien de la vidéo (si type = YouTube / Facebook)"
+                name: "video_url"
+                widget: "string"
+                required: false
+                hint: "Collez le lien YouTube ou Facebook."
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, default: "" }
+
+  # ---------- 2) CHIFFRES CLÉS + PARCOURS ----------
+  - name: "evolution"
+    label: "Notre évolution (chiffres et parcours)"
+    files:
+      - name: "stats"
+        label: "Chiffres clés"
+        file: "data/stats.json"
+        fields:
+          - { label: "Titre de la section", name: "titre", widget: "string" }
+          - { label: "Date de mise à jour des chiffres", name: "mise_a_jour", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+          - label: "Chiffres"
+            name: "items"
+            widget: "list"
+            label_singular: "chiffre"
+            summary: "{{fields.valeur}}{{fields.suffixe}} {{fields.libelle}}"
+            hint: "Un chiffre laissé vide n'apparaît pas sur le site."
+            fields:
+              - { label: "Nombre (chiffres seulement, ex. 350)", name: "valeur", widget: "string", required: false }
+              - { label: "Après le nombre (ex. + ou %)", name: "suffixe", widget: "string", required: false }
+              - { label: "Texte sous le nombre", name: "libelle", widget: "string" }
+      - name: "parcours"
+        label: "Notre parcours (grandes étapes)"
+        file: "data/parcours.json"
+        fields:
+          - label: "Étapes"
+            name: "items"
+            widget: "list"
+            label_singular: "étape"
+            summary: "{{fields.annee}} — {{fields.titre}}"
+            fields:
+              - { label: "Année (ex. 2024)", name: "annee", widget: "string" }
+              - { label: "Titre de l'étape", name: "titre", widget: "string" }
+              - { label: "Petite explication", name: "texte", widget: "text", required: false }

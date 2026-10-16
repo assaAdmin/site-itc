@@ -95,3 +95,16 @@ comment consulter les inscriptions et activer une notification par e-mail
 à chaque nouvelle demande.
 IMPORTANT : ce formulaire ne fonctionne que sur un site déployé depuis
 GitHub (comme « ittrainingcenter »), pas via un simple Netlify Drop.
+
+
+9. CHIFFRES CLÉS, PARCOURS ET ADMIN (mise à jour du 16 octobre 2026)
+--------------------------------------------------------------------
+  data/stats.json    → les chiffres affichés (accueil + Qui sommes-nous)
+  data/parcours.json → les grandes étapes (page Qui sommes-nous)
+  js/stats.js        → affiche ces chiffres et ces étapes
+  Un chiffre laissé vide n'est pas affiché. Sans étape, la section
+  « Notre parcours » reste cachée.
+  Tout se modifie dans /admin, rubrique « Notre évolution ».
+  Connexion à /admin : avec le compte GitHub (fournisseur OAuth GitHub
+  installé dans Netlify). Netlify Identity n'est plus utilisé.
+  Vidéos : fichier MP4 de moins de 50 Mo, sinon lien YouTube/Facebook.

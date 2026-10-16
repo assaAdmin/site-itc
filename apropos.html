@@ -53,6 +53,55 @@
     </div>
   </section>
 
+  <!-- NOTRE APPROCHE : le laboratoire et la pédagogie -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Network Innovation &amp; Practice Lab</p>
+        <h2>Notre approche : apprendre en faisant</h2>
+        <p>Nos apprenants travaillent sur du vrai matériel, en petits groupes, à partir de cas tirés d'entreprises, de fournisseurs d'accès internet, d'hôpitaux, d'écoles et d'ONG.</p>
+      </div>
+      <div class="approche-chiffres reveal">
+        <div><strong>80 %</strong><span>de pratique, 20 % de théorie</span></div>
+        <div><strong>4 à 8</strong><span>personnes par groupe</span></div>
+        <div><strong>5</strong><span>laboratoires équipés</span></div>
+      </div>
+      <ul class="diamond-list grid grid-2 reveal" style="margin-top:22px;">
+        <li>Laboratoire MikroTik</li>
+        <li>Laboratoire Cisco</li>
+        <li>Laboratoire sans-fil Ubiquiti</li>
+        <li>Salle informatique</li>
+        <li>Laboratoire de câblage</li>
+      </ul>
+      <p class="reveal" style="margin-top:18px;font-weight:600;color:var(--orange);">« Comprendre. Pratiquer. Expérimenter. Maîtriser. »</p>
+    </div>
+  </section>
+
+  <!-- CHIFFRES CLÉS : les nombres viennent de data/stats.json (modifiables dans /admin).
+       La section reste cachée tant qu'aucun chiffre n'est rempli. -->
+  <section id="stats" class="stats-band" hidden>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Notre évolution</p>
+        <h2 id="stats-titre">IT Training Center en chiffres</h2>
+      </div>
+      <div id="stats-grid" class="stats-grid"></div>
+      <p id="stats-maj" class="stats-maj"></p>
+    </div>
+  </section>
+
+  <!-- NOTRE PARCOURS : les étapes viennent de data/parcours.json (modifiables dans /admin).
+       La section reste cachée tant qu'aucune étape n'est ajoutée. -->
+  <section id="parcours" hidden>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Notre parcours</p>
+        <h2>Les grandes étapes</h2>
+      </div>
+      <ol id="parcours-liste" class="parcours-liste"></ol>
+    </div>
+  </section>
+
   <section class="bg-alt">
     <div class="container">
       <div class="split-cards">
@@ -138,6 +187,29 @@
     </div>
   </section>
 
+  <!-- AU-DELÀ DE LA FORMATION : services et applications -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Au-delà de la formation</p>
+        <h2>Nous construisons aussi des solutions</h2>
+        <p>Notre équipe met son expertise au service des organisations et développe ses propres applications.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <h3>Services réseaux et informatiques</h3>
+          <p>Audit, conception et déploiement de réseaux et de Wi-Fi, maintenance et accompagnement technique.</p>
+          <p><a href="services.html">Voir nos services →</a></p>
+        </div>
+        <div class="card reveal">
+          <h3>Nos applications</h3>
+          <p><strong>Kivucascade</strong> (petites annonces), <strong>ASSA Smart School</strong> (gestion scolaire) et des logiciels de gestion sur mesure pour un fournisseur d'accès internet, un centre de formation, une bibliothèque et un hôtel.</p>
+          <p><a href="solutions.html">Découvrir nos solutions →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-tight">
     <div class="container">
       <div class="cta-banner reveal">
@@ -195,6 +267,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/stats.js"></script>
 <script src="js/chat-widgets.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

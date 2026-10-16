@@ -134,6 +134,19 @@
     </div>
   </section>
 
+  <!-- CHIFFRES CLÉS : les nombres viennent de data/stats.json (modifiables dans /admin).
+       La section reste cachée tant qu'aucun chiffre n'est rempli. -->
+  <section id="stats" class="stats-band" hidden>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Notre évolution</p>
+        <h2 id="stats-titre">IT Training Center en chiffres</h2>
+      </div>
+      <div id="stats-grid" class="stats-grid"></div>
+      <p id="stats-maj" class="stats-maj"></p>
+    </div>
+  </section>
+
   <!-- DOMAINES D'EXPERTISE -->
   <section class="bg-alt">
     <div class="container">
@@ -168,7 +181,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Nos solutions numériques</p>
         <h2>Nous formons, et nous créons aussi</h2>
-        <p>Deux applications conçues et développées par Ets. ASSA, pour les commerçants et les écoles de la RDC.</p>
+        <p>Des applications conçues et développées par Ets. ASSA : pour le grand public, les écoles et les entreprises de la RDC.</p>
       </div>
       <div class="grid grid-2">
         <div class="card reveal">
@@ -184,6 +197,7 @@
           <p><a href="solutions.html#assa-smart-school">En savoir plus →</a></p>
         </div>
       </div>
+      <p class="reveal" style="margin-top:22px;">Et des <strong>logiciels de gestion sur mesure</strong> : fournisseurs d'accès internet, centres de formation, bibliothèques, hôtels… <a href="solutions.html">Voir toutes nos solutions →</a></p>
     </div>
   </section>
 
@@ -252,6 +266,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/stats.js"></script>
 <script src="js/chat-widgets.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

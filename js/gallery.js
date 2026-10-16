@@ -41,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
             link.textContent = 'Voir la vidéo';
             media.appendChild(link);
           }
+        } else if (item.type === 'video_file' && item.video_file) {
+          // Vidéo envoyée comme fichier MP4 depuis l'admin
+          var video = document.createElement('video');
+          video.src = item.video_file;
+          video.controls = true;
+          video.preload = 'metadata';
+          video.playsInline = true;
+          media.appendChild(video);
         } else if (item.file) {
           var img = document.createElement('img');
           img.src = item.file;
