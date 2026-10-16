@@ -1,4 +1,4 @@
-// Bouton WhatsApp flottant + chat en direct (Tawk.to)
+// Bouton WhatsApp flottant (seul moyen de discussion sur le site)
 document.addEventListener('DOMContentLoaded', function () {
 
   // ---- 1) Bouton WhatsApp flottant ----
@@ -15,23 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     '</svg>';
   document.body.appendChild(wa);
 
-  // ---- 2) Chat en direct (Tawk.to) ----
-  // À faire une seule fois : créez un compte gratuit sur tawk.to, puis remplacez
-  // PROPERTY_ID et WIDGET_ID ci-dessous par les identifiants fournis dans votre
-  // tableau de bord Tawk.to (Administration > Channels > Chat Widget).
-  var TAWK_PROPERTY_ID = '6a59d825ce67b81d468d306e';
-  var TAWK_WIDGET_ID = '1jtnf8lf0';
-
-  if (TAWK_PROPERTY_ID !== 'PROPERTY_ID' && TAWK_WIDGET_ID !== 'WIDGET_ID') {
-    var Tawk_API = window.Tawk_API || {};
-    window.Tawk_API = Tawk_API;
-    window.Tawk_LoadStart = new Date();
-    var s1 = document.createElement('script');
-    var s0 = document.getElementsByTagName('script')[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/' + TAWK_PROPERTY_ID + '/' + TAWK_WIDGET_ID;
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  }
+  // ---- 2) Chat en direct (Tawk.to) : RETIRÉ le 16 octobre 2026 ----
+  // Seul le bouton WhatsApp reste sur le site. Le compte Tawk.to n'est plus utilisé ici.
 });

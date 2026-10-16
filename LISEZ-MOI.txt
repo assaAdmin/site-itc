@@ -60,7 +60,7 @@ Je modifierai directement les fichiers pour vous.
   css/style.css   → tous les styles (couleurs, polices, mise en page)
   js/main.js      → le menu mobile et le formulaire de contact
   js/gallery.js   → affiche automatiquement les photos/vidéos de data/gallery.json
-  js/chat-widgets.js → bouton WhatsApp flottant + chat en direct (Tawk.to)
+  js/chat-widgets.js → bouton WhatsApp flottant
   assets/         → le logo et les images
   data/gallery.json → le contenu de la page Galerie (modifiable via /admin)
   admin/          → panneau d'administration (Decap CMS) pour publier photos/vidéos
@@ -77,15 +77,12 @@ photos et des vidéos vous-même, à tout moment, sans passer par moi.
 
 7. CHAT AVEC LES VISITEURS
 ------------------------------
-Le site inclut désormais deux moyens de discuter avec vos visiteurs :
+Le site propose un seul moyen de discuter avec vos visiteurs :
 
-  a) Bouton WhatsApp flottant (déjà actif, aucun réglage requis)
+  Bouton WhatsApp flottant (déjà actif, aucun réglage requis)
      Un bouton vert en bas à droite de chaque page ouvre directement une
      conversation WhatsApp avec le numéro +243 994 201 684.
-
-  b) Chat en direct sur le site (Tawk.to — à activer, gratuit)
-     Un guide séparé (« Guide Chat en direct Tawk.to ») explique comment
-     créer un compte gratuit et l'activer en 5 minutes.
+  (Le chat Tawk.to a été retiré le 16 octobre 2026.)
 
 8. FORMULAIRE D'INSCRIPTION EN LIGNE
 -----------------------------------------
