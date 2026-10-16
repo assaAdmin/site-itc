@@ -1,0 +1,12 @@
+{
+  "titre": "IT Training Center en chiffres",
+  "mise_a_jour": "2026-10-16",
+  "items": [
+    { "valeur": "", "suffixe": "+", "libelle": "apprenants formés" },
+    { "valeur": "", "suffixe": "+", "libelle": "entreprises et organisations accompagnées" },
+    { "valeur": "6", "suffixe": "", "libelle": "formations certifiantes" },
+    { "valeur": "5", "suffixe": "", "libelle": "laboratoires équipés" },
+    { "valeur": "6", "suffixe": "", "libelle": "applications créées par notre équipe" },
+    { "valeur": "3", "suffixe": "", "libelle": "écoles pilotes ASSA Smart School" }
+  ]
+}
