@@ -754,3 +754,17 @@ section { padding: 76px 0; }
 .brand { order: 1; } .nav-links { order: 2; } .langue-choix { order: 3; } .nav-toggle { order: 4; }
 @media (max-width: 1100px) { .langue-choix { margin-left: auto; } }
 @media (min-width: 1101px) and (max-width: 1240px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.88rem; } }
+
+/* =====================================================================
+   SITE SUR UNE SEULE PAGE — 16 octobre 2026
+   Toutes les parties se suivent sur la page d'accueil ; les liens du menu
+   font défiler jusqu'à la partie choisie.
+   ===================================================================== */
+html { scroll-behavior: smooth; }
+/* quand on arrive sur une partie, son titre n'est pas caché sous l'en-tête */
+section[id] { scroll-margin-top: 0; }
+/* en-tête de chaque partie (Formations, Services…) : moins haut qu'en haut de page */
+.page-hero.chapitre { padding: 96px 0 70px; position: relative; }
+.page-hero.chapitre::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--cable); background-size: 360px 6px; }
+.titre-chapitre { font-size: clamp(2.2rem, 4.6vw, 3.6rem); font-weight: 500; letter-spacing: -0.015em; line-height: 1.06; color: var(--white); max-width: 20ch; }
+@media (max-width: 620px) { .page-hero.chapitre { padding: 80px 0 56px; } }

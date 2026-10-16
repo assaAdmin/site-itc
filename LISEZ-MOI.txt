@@ -126,3 +126,15 @@ GitHub (comme « ittrainingcenter »), pas via un simple Netlify Drop.
 ---------------
   Section « Nos partenaires » sur l'accueil et Qui sommes-nous.
   Pour ajouter un partenaire : copier un bloc <a class="partenaire">…</a>.
+
+12. SITE SUR UNE SEULE PAGE (16 octobre 2026)
+---------------------------------------------
+  Tout le contenu est maintenant dans index.html, partie par partie :
+  Accueil, Formations, Qui sommes-nous, Services, Solutions, Galerie,
+  Contact (chaque partie est repérée par un commentaire « PARTIE … »).
+  Le menu fait défiler jusqu'à la partie choisie et se souligne tout seul.
+  Les fichiers formations.html, apropos.html, services.html, solutions.html,
+  galerie.html et contact.html ne servent plus qu'à rediriger les anciens
+  liens vers la bonne partie. Pour modifier un texte : index.html.
+  La page d'inscription (inscription.html) reste une page à part.
+  L'ancienne version (plusieurs pages) est gardée à part, au cas où.

@@ -13,7 +13,7 @@
 
 <header class="site-header">
   <nav class="nav">
-    <a href="index.html" class="brand">
+    <a href="#accueil" class="brand">
       <img src="assets/logo.png" alt="Logo Ets. ASSA">
       <span class="brand-text">IT Training Center<small>Ets. ASSA — Bukavu</small></span>
     </a>
@@ -21,22 +21,26 @@
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
-      <a href="index.html" aria-current="page">Accueil</a>
-      <a href="formations.html">Formations</a>
-      <a href="apropos.html">Qui sommes-nous</a>
-      <a href="services.html">Services</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="galerie.html">Galerie</a>
-      <a href="contact.html">Contact</a>
+      <a href="#accueil" aria-current="page">Accueil</a>
+      <a href="#formations">Formations</a>
+      <a href="#apropos">Qui sommes-nous</a>
+      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
       <a href="inscription.html" class="btn btn-outline">S'inscrire</a>
     </div>
   </nav>
 </header>
 
 <main>
+  <!-- ============================================================
+       PARTIE « ACCUEIL »
+       ============================================================ -->
+
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="accueil">
     <svg class="topology" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <g stroke="#d4a843" stroke-width="1.2" opacity="0.5">
         <line x1="120" y1="120" x2="360" y2="240"/>
@@ -69,8 +73,8 @@
         <h1>Bâtir les ingénieurs réseau de demain</h1>
         <p class="lede">Formations pratiques en réseaux, cybersécurité, sans-fil, fibre optique et cloud — dans un laboratoire professionnel, avec des formateurs de terrain. 20% théorie, 80% pratique.</p>
         <div class="hero-actions">
-          <a href="formations.html" class="btn btn-primary">Découvrir nos formations</a>
-          <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+          <a href="#formations" class="btn btn-primary">Découvrir nos formations</a>
+          <a href="#contact" class="btn btn-ghost">Nous contacter</a>
         </div>
       </div>
       <div class="hero-photo reveal">
@@ -106,7 +110,7 @@
         <p class="eyebrow">Pourquoi choisir IT Training Center ?</p>
         <h2>Notre différence : une formation tournée vers la pratique</h2>
         <p>Notre philosophie : 20 % de théorie, 80 % de pratique, pour former des professionnels opérationnels dès le premier jour.</p>
-        <a href="formations.html" class="btn btn-primary">Voir nos formations</a>
+        <a href="#formations" class="btn btn-primary">Voir nos formations</a>
       </div>
       <ul class="liste-coches reveal">
           <li><svg class="coche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><h3>Un vrai laboratoire</h3><p>Le Network Innovation &amp; Practice Lab : 5 laboratoires équipés de matériel professionnel.</p></div></li>
@@ -202,29 +206,299 @@
     </div>
   </section>
 
-  <!-- NOS SOLUTIONS NUMÉRIQUES (détails sur solutions.html) -->
+
+  <!-- ============================================================
+       PARTIE « FORMATIONS »
+       ============================================================ -->
+
+
+  <section class="page-hero chapitre" id="formations">
+    <div class="container">
+      <p class="eyebrow">Catalogue de formation</p>
+      <h2 class="titre-chapitre">Des parcours certifiants, du débutant au niveau avancé</h2>
+      <p>Réseaux, systèmes, sans-fil, cybersécurité, fibre optique et cloud : six parcours pratiques, en petits groupes, qui préparent aux certifications internationales.</p>
+    </div>
+  </section>
+
+  
+
+  <!-- NOS FORMATIONS -->
+  <section>
+    <div class="container">
+      <div class="head-with-icon reveal">
+        <img src="assets/icon-training.png" alt="">
+        <div class="section-head" style="margin-bottom:0;">
+          <p class="eyebrow" style="margin-bottom:6px;">Nos formations</p>
+          <h2 style="margin:0;">Six parcours, une même exigence de pratique</h2>
+        </div>
+      </div>
+      <div class="grid grid-3">
+        <div class="program-card reveal">
+          <span class="code-badge">MTCNA</span>
+          <h3>MikroTik Certified Network Associate</h3>
+          <p>RouterOS, routage, sécurité, Wi-Fi.</p>
+        </div>
+        <div class="program-card reveal">
+          <span class="code-badge">CCNA</span>
+          <h3>Cisco Certified Network Associate</h3>
+          <p>Switching, routage, sécurité, sans-fil.</p>
+        </div>
+        <div class="program-card reveal">
+          <span class="code-badge">UNIFI</span>
+          <h3>Ubiquiti UniFi</h3>
+          <p>Déploiement et administration d'infrastructures UniFi.</p>
+        </div>
+        <div class="program-card reveal">
+          <span class="code-badge">ENE</span>
+          <h3>Enterprise Network Engineering</h3>
+          <p>Conception multi-constructeurs, haute disponibilité.</p>
+        </div>
+        <div class="program-card reveal">
+          <span class="code-badge">WINSRV</span>
+          <h3>Windows Server Administration</h3>
+          <p>Active Directory, DNS/DHCP, GPO, PowerShell.</p>
+        </div>
+        <div class="program-card reveal">
+          <span class="code-badge">SEC+</span>
+          <h3>Cybersecurity Fundamentals</h3>
+          <p>Menaces, sécurité réseau/systèmes, cryptographie, incidents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALITÉS -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start;">
+        <div class="reveal">
+          <p class="eyebrow">Modalités de formation</p>
+          <h2>Un format adapté à votre emploi du temps</h2>
+          <ul class="diamond-list">
+            <li>Présentiel, hybride ou à distance</li>
+            <li>Formations intra-entreprise personnalisables</li>
+            <li>Sessions en soirée, week-end ou intensives</li>
+            <li>Groupes restreints de 4 à 8 participants</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Notre philosophie pédagogique</p>
+          <h2>20% Théorie · 80% Pratique</h2>
+          <ul class="diamond-list">
+            <li>Un laboratoire professionnel : le Network Innovation &amp; Practice Lab</li>
+            <li>Des scénarios inspirés d'environnements réels (entreprises, ISP, hôpitaux, écoles, ONG)</li>
+            <li>Une évaluation orientée compétences : labos, études de cas, projet final</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOS LABORATOIRES -->
   <section>
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Nos solutions numériques</p>
-        <h2>Nous formons, et nous créons aussi</h2>
-        <p>Des applications conçues et développées par Ets. ASSA : pour le grand public, les écoles et les entreprises de la RDC.</p>
+        <p class="eyebrow">Nos laboratoires</p>
+        <h2>Apprendre sur du matériel réel</h2>
       </div>
-      <div class="grid grid-2">
+      <div class="grid grid-3">
         <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg></div>
-          <h3>Kivucascade</h3>
-          <p>Le site de petites annonces de la RDC : vendre, acheter, trouver la bonne affaire près de chez soi.</p>
-          <p><a href="https://kivucascade.com" target="_blank" rel="noopener">kivucascade.com →</a></p>
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="11" rx="2"/><path d="M8 20h8"/></svg></div>
+          <h3>MikroTik Networking Lab</h3>
+          <p>Infrastructures ISP et entreprise.</p>
         </div>
         <div class="card reveal">
-          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
-          <h3>ASSA Smart School</h3>
-          <p>La gestion scolaire connectée : présences, notes, bulletins, santé et lien direct avec les parents.</p>
-          <p><a href="solutions.html#assa-smart-school">En savoir plus →</a></p>
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
+          <h3>Cisco Networking Lab</h3>
+          <p>Conception et sécurisation réseau.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/></svg></div>
+          <h3>Ubiquiti Wireless Lab</h3>
+          <p>Déploiements Wi-fi professionnels.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="12" rx="1.5"/><path d="M9 20h6M12 15v5"/></svg></div>
+          <h3>Salle informatique</h3>
+          <p>Virtualisation, simulations, certifications.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M4 12h4l2-3 2 6 2-3h6"/></svg></div>
+          <h3>Laboratoire de câblage</h3>
+          <p>Câblage structuré, baies de brassage, tests.</p>
         </div>
       </div>
-      <p class="reveal" style="margin-top:22px;">Et des <strong>logiciels de gestion sur mesure</strong> : fournisseurs d'accès internet, centres de formation, bibliothèques, hôtels… <a href="solutions.html">Voir toutes nos solutions →</a></p>
+    </div>
+  </section>
+
+  <!-- VALIDATION -->
+  <section class="bg-navy">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow" style="justify-content:center;">Validation &amp; certification</p>
+        <h2>Ce que vous obtenez à l'issue de la formation</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.14);">
+          <h3 style="color:#fff;">Attestation de formation</h3>
+          <p>Délivrée par IT Training Center à l'issue du parcours.</p>
+        </div>
+        <div class="card reveal" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.14);">
+          <h3 style="color:#fff;">Certificat de réussite</h3>
+          <p>Après évaluation pratique (labos, études de cas, projet final).</p>
+        </div>
+        <div class="card reveal" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.14);">
+          <h3 style="color:#fff;">Certifications officielles</h3>
+          <p>Préparation aux certifications MTCNA, CCNA, etc.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ============================================================
+       PARTIE « QUI SOMMES-NOUS »
+       ============================================================ -->
+
+
+  <section class="page-hero chapitre" id="apropos">
+    <div class="container">
+      <p class="eyebrow">Qui sommes-nous</p>
+      <h2 class="titre-chapitre">Rapprocher la formation des besoins réels du marché</h2>
+      <p>IT Training Center est un centre de formation spécialisé en réseaux informatiques, systèmes, cybersécurité et technologies Cloud.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="head-with-icon reveal">
+        <img src="assets/icon-about.png" alt="">
+        <h2 style="margin:0;">Notre histoire</h2>
+      </div>
+      <p style="max-width:70ch;">IT Training Center est né du constat d'un écart entre formation académique et exigences du marché. Nous rapprochons l'enseignement des besoins concrets des entreprises grâce à des laboratoires équipés, des projets réels et des formateurs expérimentés.</p>
+    </div>
+  </section>
+
+  <!-- NOTRE APPROCHE : le laboratoire et la pédagogie -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Network Innovation &amp; Practice Lab</p>
+        <h2>Notre approche : apprendre en faisant</h2>
+        <p>Nos apprenants travaillent sur du vrai matériel, en petits groupes, à partir de cas tirés d'entreprises, de fournisseurs d'accès internet, d'hôpitaux, d'écoles et d'ONG.</p>
+      </div>
+      <div class="approche-chiffres reveal">
+        <div><strong>80 %</strong><span>de pratique, 20 % de théorie</span></div>
+        <div><strong>4 à 8</strong><span>personnes par groupe</span></div>
+        <div><strong>5</strong><span>laboratoires équipés</span></div>
+      </div>
+      <ul class="diamond-list grid grid-2 reveal" style="margin-top:22px;">
+        <li>Laboratoire MikroTik</li>
+        <li>Laboratoire Cisco</li>
+        <li>Laboratoire sans-fil Ubiquiti</li>
+        <li>Salle informatique</li>
+        <li>Laboratoire de câblage</li>
+      </ul>
+      <p class="reveal" style="margin-top:18px;font-weight:600;color:var(--orange);">« Comprendre. Pratiquer. Expérimenter. Maîtriser. »</p>
+    </div>
+  </section>
+
+  <!-- NOTRE PARCOURS : les étapes viennent de data/parcours.json (modifiables dans /admin).
+       La section reste cachée tant qu'aucune étape n'est ajoutée. -->
+  <section id="parcours" hidden>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Notre parcours</p>
+        <h2>Les grandes étapes</h2>
+      </div>
+      <ol id="parcours-liste" class="parcours-liste"></ol>
+    </div>
+  </section>
+
+  <section class="bg-alt">
+    <div class="container">
+      <div class="split-cards">
+        <div class="split-card mission reveal">
+          <p class="eyebrow" style="color:var(--gold-light);">Mission</p>
+          <h3>Former une nouvelle génération de professionnels</h3>
+          <p>Compétents, innovants et immédiatement opérationnels dans les métiers des réseaux, des télécommunications et de la transformation numérique.</p>
+        </div>
+        <div class="split-card vision reveal">
+          <p class="eyebrow" style="color:var(--navy-950);">Vision</p>
+          <h3>Un centre d'excellence en Afrique centrale</h3>
+          <p>Devenir un centre de référence en RDC et en Afrique centrale pour le développement des compétences technologiques et l'innovation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Domaines de compétences développés</p>
+        <h2>Ce que nos apprenants savent faire en sortant</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card on-teal reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M12 12L4 6M12 12l8-6M12 12l-8 6M12 12l8 6"/></svg></div>
+          <h3>Réseaux informatiques d'entreprise</h3>
+        </div>
+        <div class="card on-teal reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h5l2-6 4 12 2-6h7"/></svg></div>
+          <h3>Télécommunications et réseaux IP</h3>
+        </div>
+        <div class="card on-teal reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="11" rx="2"/><path d="M8 20h8"/></svg></div>
+          <h3>Administration systèmes et infrastructures</h3>
+        </div>
+        <div class="card on-teal reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l7 4v6c0 4.5-3 7.5-7 10-4-2.5-7-5.5-7-10V6l7-4z"/></svg></div>
+          <h3>Cybersécurité</h3>
+        </div>
+        <div class="card on-teal reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18a4 4 0 0 1-1-7.9 5 5 0 0 1 9.6-2A4.5 4.5 0 0 1 17 18H7z"/></svg></div>
+          <h3>Technologies Cloud et services numériques</h3>
+        </div>
+        <div class="card on-teal reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4v16h16M8 15l3-4 3 3 4-6"/></svg></div>
+          <h3>Transformation digitale des organisations</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-alt">
+    <div class="container">
+      <div class="head-with-icon reveal">
+        <img src="assets/icon-values.png" alt="">
+        <h2 style="margin:0;">Nos valeurs</h2>
+      </div>
+      <div class="values-row reveal">
+        <span class="value-chip">Excellence</span>
+        <span class="value-chip">Innovation</span>
+        <span class="value-chip">Intégrité</span>
+        <span class="value-chip">Professionnalisme</span>
+        <span class="value-chip">Apprentissage continu</span>
+        <span class="value-chip">Collaboration</span>
+        <span class="value-chip">Orientation vers l'impact</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Public cible</p>
+        <h2>À qui s'adressent nos formations</h2>
+      </div>
+      <ul class="diamond-list grid grid-2 reveal">
+        <li>Étudiants et jeunes diplômés en informatique</li>
+        <li>Techniciens et administrateurs réseau</li>
+        <li>Ingénieurs et responsables informatiques</li>
+        <li>Entreprises, ONG et administrations publiques</li>
+      </ul>
     </div>
   </section>
 
@@ -245,18 +519,301 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section-tight">
+
+
+
+  <!-- ============================================================
+       PARTIE « SERVICES »
+       ============================================================ -->
+
+
+  <section class="page-hero chapitre" id="services">
     <div class="container">
-      <div class="cta-banner reveal">
-        <div>
-          <h2>Prêt à passer à la pratique ?</h2>
-          <p>Parlons de vos objectifs et du parcours de formation adapté à votre profil.</p>
+      <p class="eyebrow">Services professionnels</p>
+      <h2 class="titre-chapitre">Une expertise de terrain, au service de vos infrastructures</h2>
+      <p>Au-delà de la formation, IT Training Center accompagne les entreprises et organisations dans leurs projets réseau — de l'audit à la mise en œuvre.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3>Audit des infrastructures réseau</h3>
         </div>
-        <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9l8-5 8 5v10"/><path d="M9 19v-6h6v6"/></svg></div>
+          <h3>Conception d'infrastructures réseau</h3>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/></svg></div>
+          <h3>Déploiement de réseaux Wi-Fi professionnels</h3>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+          <h3>Installation et intégration des infrastructures</h3>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 1 5 5l-1.4 1.4M9.3 17.7a4 4 0 0 1-5-5l1.4-1.4M8.5 15.5l7-7"/></svg></div>
+          <h3>Maintenance et support informatique</h3>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h13l4 4v6h-4M3 7v10h13M7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM16 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></div>
+          <h3>Logistique et approvisionnement en matériels informatiques</h3>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h12"/></svg></div>
+          <h3>Gestion de la chaîne d'approvisionnement et déploiement IT</h3>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16l4-4 4 4 6-8 4 4"/></svg></div>
+          <h3>Transit, livraison et installation d'équipements technologiques</h3>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- LIVRABLES AUDIT -->
+  <section class="bg-navy">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;">
+        <div class="reveal">
+          <p class="eyebrow">Livrables d'un audit</p>
+          <h2>Ce que vous recevez à l'issue de l'audit</h2>
+          <ul class="diamond-list">
+            <li>Rapport d'audit détaillé et schéma réseau</li>
+            <li>Liste des vulnérabilités et points critiques</li>
+            <li>Plan d'amélioration priorisé et estimation budgétaire</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.14);">
+          <h3 style="color:#fff;">Envie d'un diagnostic de votre réseau ?</h3>
+          <p>Décrivez-nous votre contexte — nous revenons vers vous avec une proposition adaptée.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:10px;">Demander un audit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PARTIE « SOLUTIONS »
+       ============================================================ -->
+
+
+  <!-- ============================================================
+       NOS SOLUTIONS : les deux applications conçues par Ets. ASSA
+       (pour ajouter un produit : copier un bloc « card » ci-dessous)
+       ============================================================ -->
+  <section class="page-hero chapitre" id="solutions">
+    <div class="container">
+      <p class="eyebrow">Nos solutions numériques</p>
+      <h2 class="titre-chapitre">Des applications conçues à Bukavu, pour la RDC</h2>
+      <p>Notre expertise en réseaux et en systèmes nous permet aussi de créer des plateformes grand public et des logiciels de gestion sur mesure : utiles au quotidien, pensés pour nos réalités.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid grid-2">
+
+        <!-- Produit 1 : Kivucascade -->
+        <div class="card reveal" id="kivucascade">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg></div>
+          <p class="eyebrow">Commerce · En ligne</p>
+          <h3>Kivucascade</h3>
+          <p>Le site de petites annonces de la RDC : vendez ce que vous avez, trouvez la bonne affaire près de chez vous. Gratuit pour tous pendant le lancement.</p>
+          <ul class="diamond-list">
+            <li>Annonces gratuites avec photos, prix en USD ou CDF</li>
+            <li>Catégories adaptées : véhicules, immobilier, mode, emploi, services…</li>
+            <li>Messagerie intégrée, alertes sur le téléphone et lien WhatsApp</li>
+            <li>Vendeurs vérifiés, avis et signalements pour la confiance</li>
+            <li>En français et en anglais, installable comme une application</li>
+          </ul>
+          <p style="margin-top:22px;"><a href="https://kivucascade.com" target="_blank" rel="noopener" class="btn btn-primary">Visiter kivucascade.com</a></p>
+        </div>
+
+        <!-- Produit 2 : ASSA Smart School -->
+        <div class="card reveal" id="assa-smart-school">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
+          <p class="eyebrow">Éducation · Pilote en cours</p>
+          <h3>ASSA Smart School</h3>
+          <p>La gestion scolaire connectée : présences, notes, bulletins, santé et lien direct avec les parents. En pilote dans trois écoles de Bukavu.</p>
+          <ul class="diamond-list">
+            <li>Carte élève ASSA-ID avec QR code sécurisé</li>
+            <li>Présences à l’entrée, en classe et à la sortie, même sans internet</li>
+            <li>Portail parent et alertes : absence, retard, résultats</li>
+            <li>Notes et bulletins au format officiel de la RDC</li>
+            <li>Dépistage santé à l’entrée et connexion des écoles par notre équipe réseau</li>
+          </ul>
+          <p style="margin-top:22px;"><a href="#contact" class="btn btn-primary">Demander une démonstration</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <!-- LOGICIELS DE GESTION SUR MESURE
+       (pour ajouter un logiciel : copier un bloc « card » ci-dessous et changer le texte) -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Logiciels de gestion sur mesure</p>
+        <h2>Des outils de gestion pour les entreprises et les institutions</h2>
+        <p>Nous concevons aussi des applications de gestion adaptées au métier de chaque organisation : utilisables en ligne par toute l'équipe, avec des données centralisées et sécurisées.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2"/><path d="M2 9a15 15 0 0 1 20 0"/></svg></div>
+          <p class="eyebrow">Télécoms · En service</p>
+          <h3>Gestion de fournisseur d'accès internet</h3>
+          <p>Réalisée pour World Technology, fournisseur d'accès internet à Bukavu.</p>
+          <ul class="diamond-list">
+            <li>Clients, forfaits et abonnements</li>
+            <li>Factures, paiements et caisse</li>
+            <li>Suivi des équipements installés</li>
+            <li>Recettes quotidiennes du hotspot</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h3M8 16h6"/></svg></div>
+          <p class="eyebrow">Formation · En service</p>
+          <h3>Gestion de centre de formation</h3>
+          <p>Utilisée chaque jour par IT Training Center (Ets. ASSA).</p>
+          <ul class="diamond-list">
+            <li>Inscriptions et suivi des formations</li>
+            <li>Facturation et trésorerie</li>
+            <li>Stock et logistique du matériel</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7"/></svg></div>
+          <p class="eyebrow">Bibliothèques</p>
+          <h3>Gestion de bibliothèque</h3>
+          <p>Pour gérer les livres physiques et la lecture en ligne.</p>
+          <ul class="diamond-list">
+            <li>Emprunts de plusieurs livres, durée de prêt modulable</li>
+            <li>Amendes automatiques en cas de retard</li>
+            <li>Lecture en ligne avec accès limité dans le temps</li>
+            <li>Compte personnel pour chaque lecteur</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20V8l9-4 9 4v12"/><path d="M8 20v-5h8v5"/><path d="M9 10h.01M15 10h.01"/></svg></div>
+          <p class="eyebrow">Hôtellerie</p>
+          <h3>Gestion hôtelière</h3>
+          <p>Pour suivre l'activité d'un hôtel au quotidien.</p>
+          <ul class="diamond-list">
+            <li>Chambres et disponibilités</li>
+            <li>Réservations, arrivées et départs</li>
+            <li>Facturation des séjours et services</li>
+          </ul>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top:26px;"><a href="#contact" class="btn btn-primary">Demander une démonstration</a></p>
+    </div>
+  </section>
+
+
+
+
+  <!-- ============================================================
+       PARTIE « GALERIE »
+       ============================================================ -->
+
+
+  <section class="page-hero chapitre" id="galerie">
+    <div class="container">
+      <p class="eyebrow">Galerie</p>
+      <h2 class="titre-chapitre">Photos &amp; vidéos</h2>
+      <p>Un aperçu de nos formations, de notre laboratoire et de nos participants sur le terrain.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div id="gallery-grid" class="gallery-grid"></div>
+      <p id="gallery-empty">Aucune photo ou vidéo n'a encore été publiée.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PARTIE « CONTACT »
+       ============================================================ -->
+
+
+  <section class="page-hero chapitre" id="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2 class="titre-chapitre">Parlons de votre projet de formation</h2>
+      <p>Une question sur nos formations, un projet d'audit réseau, ou une formation intra-entreprise à organiser ? Écrivez-nous.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+
+      <div class="reveal">
+        <h2>Nos coordonnées</h2>
+        <ul class="contact-info-list">
+          <li>
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>N° 20 Av Lundula / place Mulamba, Ibanda,<br>Bukavu, Sud-Kivu, RD Congo</span>
+          </li>
+          <li>
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0 8 7 15 15 15l3-4-6-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-6-4 1z"/></svg></span>
+            <span>
+              <a href="tel:+243994201684">+243 994 201 684</a><br>
+              <a href="tel:+243973976408">+243 973 976 408</a>
+            </span>
+          </li>
+          <li>
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <a href="mailto:etsassa.itc@gmail.com">etsassa.itc@gmail.com</a>
+          </li>
+          <li>
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+            <!-- Adresse actuelle du site. Le jour où le nom de domaine sera acheté et branché sur Netlify,
+                 remplacer les deux « ittrainingcenter.netlify.app » ci-dessous par le nouveau nom. -->
+            <a href="https://ittrainingcenter.netlify.app" target="_blank" rel="noopener">ittrainingcenter.netlify.app</a>
+          </li>
+        </ul>
+
+        <div class="map-frame">
+          <iframe title="Localisation IT Training Center à Bukavu" loading="lazy" src="https://maps.google.com/maps?q=Ibanda%2C%20Bukavu%2C%20RD%20Congo&t=&z=13&ie=UTF8&output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h2>Envoyez-nous un message</h2>
+        <form class="contact-form">
+          <div class="form-row">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Ex. : Demande d'information — MTCNA">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer le message</button>
+          <p class="form-note">Ce site n'a pas de serveur : le bouton ouvre votre messagerie habituelle (Gmail, Outlook...) avec le message déjà rempli, prêt à envoyer à etsassa.itc@gmail.com.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
 
 </main>
 
@@ -273,12 +830,12 @@
       <div>
         <h4>Navigation</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="formations.html">Formations</a></li>
-          <li><a href="apropos.html">Qui sommes-nous</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="solutions.html">Nos solutions</a></li>
-          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#formations">Formations</a></li>
+          <li><a href="#apropos">Qui sommes-nous</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Nos solutions</a></li>
+          <li><a href="#galerie">Galerie</a></li>
           <li><a href="inscription.html">S'inscrire</a></li>
         </ul>
       </div>
@@ -287,7 +844,7 @@
         <ul class="footer-links">
           <li><a href="tel:+243994201684">+243 994 201 684</a></li>
           <li><a href="mailto:etsassa.itc@gmail.com">etsassa.itc@gmail.com</a></li>
-          <li><a href="contact.html">Nous écrire</a></li>
+          <li><a href="#contact">Nous écrire</a></li>
         </ul>
       </div>
       <div>
@@ -307,6 +864,7 @@
 <script src="js/main.js"></script>
 <script src="js/stats.js"></script>
 <script src="js/effets.js"></script>
+<script src="js/gallery.js"></script>
 <script src="js/chat-widgets.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

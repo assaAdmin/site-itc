@@ -1,17 +1,42 @@
-// Effets visuels de la page d'accueil
-// La devise « Comprendre. Pratiquer. Expérimenter. Maîtriser. » s'allume mot par mot
-// à mesure que l'on fait défiler la page.
+// Effets visuels de la page d'accueil (site sur une seule page)
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ---------- 1) Le menu suit la partie affichée à l'écran ----------
+  // Quand on fait défiler la page, le lien du menu correspondant (Formations,
+  // Services…) est souligné automatiquement.
+  var liens = document.querySelectorAll('.nav-links a[href^="#"]');
+  var parties = [];
+  liens.forEach(function (a) {
+    var cible = document.getElementById(a.getAttribute('href').slice(1));
+    if (cible) parties.push({ lien: a, cible: cible });
+  });
+  function partieActive() {
+    var repere = window.innerHeight * 0.35; // un tiers de l'écran, sous l'en-tête
+    var active = parties[0];
+    parties.forEach(function (p) {
+      if (p.cible.getBoundingClientRect().top - repere <= 0) active = p;
+    });
+    // tout en bas de la page : dernière partie (Contact)
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) active = parties[parties.length - 1];
+    parties.forEach(function (p) {
+      if (p === active) p.lien.setAttribute('aria-current', 'page');
+      else p.lien.removeAttribute('aria-current');
+    });
+  }
+  if (parties.length) {
+    window.addEventListener('scroll', partieActive, { passive: true });
+    window.addEventListener('resize', partieActive);
+    partieActive();
+  }
+
+  // ---------- 2) La devise s'allume mot par mot ----------
   var devise = document.querySelector('.devise');
   if (!devise) return;
   var mots = devise.querySelectorAll('span');
-
-  // Si la personne a demandé moins d'animations : tout est allumé directement
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     mots.forEach(function (m) { m.classList.add('allume'); });
     return;
   }
-
   function miseAJour() {
     var zone = devise.getBoundingClientRect();
     var hauteur = window.innerHeight;
