@@ -2,6 +2,7 @@
 // À gauche : le texte exact en français ; à droite : sa traduction.
 // Pour un nouveau texte, ajoutez une ligne :  "Texte français": "English text",
 window.TRADUCTION_EN = {
+  "Espace administrateur": "Admin area",
   "Réseaux, systèmes, sans-fil, cybersécurité, fibre optique et cloud : six parcours pratiques, en petits groupes, qui préparent aux certifications internationales.": "Networking, systems, wireless, cybersecurity, fibre optics and cloud: six hands-on paths, in small groups, that prepare you for international certifications.",
   "Des parcours certifiants, du débutant au niveau avancé": "Certification paths, from beginner to advanced level",
   "IT Training Center — Bâtir les ingénieurs réseau de demain": "IT Training Center — Building tomorrow's network engineers",

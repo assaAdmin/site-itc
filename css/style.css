@@ -768,3 +768,7 @@ section[id] { scroll-margin-top: 0; }
 .page-hero.chapitre::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--cable); background-size: 360px 6px; }
 .titre-chapitre { font-size: clamp(2.2rem, 4.6vw, 3.6rem); font-weight: 500; letter-spacing: -0.015em; line-height: 1.06; color: var(--white); max-width: 20ch; }
 @media (max-width: 620px) { .page-hero.chapitre { padding: 80px 0 56px; } }
+
+/* Lien discret vers l'administration, en bas de page */
+.lien-admin { display: inline-flex; align-items: center; gap: 6px; color: #7f93a6; font-size: 0.8rem; }
+.lien-admin:hover { color: var(--gold-light); }
