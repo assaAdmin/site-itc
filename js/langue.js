@@ -109,10 +109,9 @@
       b.addEventListener('click', function () {
         if (l === langue) return;
         memoriser(l);
-        // On recharge la page dans la nouvelle langue.
-        // (Le « ?lang=… » oblige le navigateur à recharger : sur un site d'une
-        //  seule page, changer seulement le « #partie » ne recharge rien.)
-        location.replace(location.pathname + '?lang=' + l + location.hash);
+        // On recharge la page dans la nouvelle langue, en haut de la page.
+        // (Le « ?lang=… » oblige le navigateur à recharger la page.)
+        location.replace(location.pathname + '?lang=' + l);
       });
       boite.appendChild(b);
     });
