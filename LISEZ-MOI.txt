@@ -138,3 +138,14 @@ GitHub (comme « ittrainingcenter »), pas via un simple Netlify Drop.
   liens vers la bonne partie. Pour modifier un texte : index.html.
   La page d'inscription (inscription.html) reste une page à part.
   L'ancienne version (plusieurs pages) est gardée à part, au cas où.
+
+13. PORTAIL DE L'ADMINISTRATION (code d'accès avant GitHub)
+-----------------------------------------------------------
+  netlify/edge-functions/portail-admin.js → demande un code d'accès avant
+  d'ouvrir /admin. Le code n'est PAS dans le site : il est rangé dans Netlify,
+  Project configuration → Environment variables → ADMIN_CODE.
+  Après le bon code, l'accès reste ouvert 12 heures dans ce navigateur.
+  Pour sortir avant : https://ittrainingcenter.netlify.app/admin/sortie
+  Pour changer le code : modifier ADMIN_CODE dans Netlify, puis
+  Deploys → Trigger deploy → Deploy project.
+  Tant que ADMIN_CODE n'existe pas, l'admin reste fermé (message d'erreur).
