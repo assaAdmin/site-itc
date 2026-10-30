@@ -221,6 +221,8 @@ window.TRADUCTION_EN = {
   "Vendeurs vérifiés, avis et signalements pour la confiance": "Verified sellers, reviews and reports for trust",
   "En français et en anglais, installable comme une application": "In French and English, installable like an app",
   "Visiter kivucascade.com": "Visit kivucascade.com",
+  "Visiter sika.cd": "Visit sika.cd",
+  "Anciennement Kivucascade · sika.cd": "Formerly Kivucascade · sika.cd",
   "Éducation · Pilote en cours": "Education · Pilot under way",
   "La gestion scolaire connectée : présences, notes, bulletins, santé et lien direct avec les parents. En pilote dans trois écoles de Bukavu.": "Connected school management: attendance, marks, report cards, health and a direct link with parents. Being piloted in three schools in Bukavu.",
   "Carte élève ASSA-ID avec QR code sécurisé": "ASSA-ID student card with a secure QR code",
