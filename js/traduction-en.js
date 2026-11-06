@@ -377,4 +377,6 @@ window.TRADUCTION_EN = {
   "Fermer": "Close",
   "Photo précédente": "Previous photo",
   "Photo suivante": "Next photo",
+  "Nos applications :": "Our apps:",
+  "Voir nos réalisations →": "See our work →",
 };

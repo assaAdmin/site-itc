@@ -824,3 +824,14 @@ section[id] { scroll-margin-top: 0; }
 .vr-suiv { right: 12px; top: 50%; transform: translateY(-50%); }
 @media (max-width: 620px) { .visionneuse-real { padding: 64px 8px; } .vr-prec, .vr-suiv { top: auto; bottom: 14px; transform: none; } .vr-prec { left: calc(50% - 60px); } .vr-suiv { right: calc(50% - 60px); } }
 html:has(.visionneuse-real:not([hidden])) { overflow: hidden; }
+
+/* BANDEAU DU HAUT : liens vers Sika et GestaConta (ajouté le 6 novembre 2026) */
+.bandeau-apps { background: var(--navy-950); color: #c9d3de; font-size: .88rem; padding: 8px 16px;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 12px; text-align: center; }
+.bandeau-apps a { color: #fff; display: inline-flex; align-items: baseline; gap: 6px; }
+.bandeau-apps a:hover strong, .bandeau-apps a:hover .bandeau-voir { color: var(--gold-light); }
+.bandeau-url { font-family: var(--font-mono); font-size: .78rem; color: var(--gold); }
+.bandeau-sep { color: #5b6b7d; }
+.bandeau-voir { color: var(--gold-light) !important; font-weight: 600; }
+.bandeau-titre { color: #9fb0c2; }
+@media (max-width: 620px) { .bandeau-titre, .bandeau-url, .bandeau-sep:last-of-type { display: none; } .bandeau-apps { font-size: .84rem; gap: 4px 10px; } }
