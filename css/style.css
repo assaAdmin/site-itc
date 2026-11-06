@@ -772,3 +772,55 @@ section[id] { scroll-margin-top: 0; }
 /* Lien discret vers l'administration, en bas de page */
 .lien-admin { display: inline-flex; align-items: center; gap: 6px; color: #7f93a6; font-size: 0.8rem; }
 .lien-admin:hover { color: var(--gold-light); }
+
+/* =========================================================
+   NOS RÉALISATIONS (ajouté le 6 novembre 2026)
+   Chaque réalisation : le texte d'un côté, les captures de l'autre.
+   « .inverse » met les captures à gauche (une sur deux, pour varier).
+   ========================================================= */
+.realisations .container { display: grid; grid-template-columns: minmax(0, 1fr); gap: 72px; }
+.realisation { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 48px; align-items: start; }
+.realisation.inverse .realisation-texte { order: 2; }
+.realisation h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.realisation-lien { font-family: var(--font-mono); font-size: .85rem; font-weight: 500; color: var(--teal); }
+.realisation-intro { font-size: 1.12rem; color: var(--navy-900); font-weight: 500; }
+.realisation .diamond-list { gap: 10px; margin: 6px 0 18px; }
+.realisation-note { font-size: .92rem; border-left: 3px solid var(--gold); padding: 6px 0 6px 14px; background: rgba(212, 168, 67, .08); border-radius: 0 8px 8px 0; }
+.realisation-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+/* Les captures : une grande image + une rangée de miniatures */
+.realisation-media { position: sticky; top: 96px; }
+.realisation-media button { all: unset; cursor: zoom-in; display: block; box-sizing: border-box; }
+.realisation-media button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 10px; }
+.realisation-principale { width: 100%; border-radius: var(--radius); overflow: hidden; background: var(--navy-900);
+  box-shadow: var(--shadow-lift); border: 1px solid var(--line); }
+.realisation-principale img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; background: var(--paper-dim); transition: transform .4s ease; }
+.realisation-principale:hover img { transform: scale(1.02); }
+.realisation-miniatures { display: flex; gap: 10px; overflow-x: auto; padding: 12px 2px 6px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.realisation-miniatures button { flex: 0 0 96px; height: 64px; border-radius: 8px; overflow: hidden; border: 2px solid transparent;
+  background: var(--paper-dim); scroll-snap-align: start; opacity: .75; transition: opacity .2s, border-color .2s; }
+.realisation-miniatures button:hover, .realisation-miniatures button.actif { opacity: 1; border-color: var(--orange); }
+.realisation-miniatures img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.realisation-compteur { font-family: var(--font-mono); font-size: .78rem; margin: 4px 0 0; color: var(--ink-soft); }
+
+@media (max-width: 900px) {
+  .realisation { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .realisation.inverse .realisation-texte { order: 0; }
+  .realisation-media { position: static; order: -1; }
+  .realisations .container { gap: 56px; }
+}
+
+/* La fenêtre d'agrandissement */
+.visionneuse-real { position: fixed; inset: 0; z-index: 1000; background: rgba(8, 16, 28, .94); display: flex; align-items: center; justify-content: center; padding: 56px 64px; }
+.visionneuse-real[hidden] { display: none; }
+.visionneuse-real figure { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.visionneuse-real img { max-width: 100%; max-height: calc(100vh - 150px); border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,.5); background: #fff; }
+.visionneuse-real figcaption { color: #e8edf3; font-size: .95rem; text-align: center; }
+.vr-numero { font-family: var(--font-mono); color: var(--gold-light); margin-left: 8px; }
+.visionneuse-real button { position: absolute; border: 0; cursor: pointer; color: #fff; background: rgba(255,255,255,.12); border-radius: 50%; width: 48px; height: 48px; font-size: 1.6rem; line-height: 1; display: grid; place-items: center; }
+.visionneuse-real button:hover { background: var(--orange); }
+.vr-fermer { top: 14px; right: 14px; font-size: 1.2rem !important; }
+.vr-prec { left: 12px; top: 50%; transform: translateY(-50%); }
+.vr-suiv { right: 12px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 620px) { .visionneuse-real { padding: 64px 8px; } .vr-prec, .vr-suiv { top: auto; bottom: 14px; transform: none; } .vr-prec { left: calc(50% - 60px); } .vr-suiv { right: calc(50% - 60px); } }
+html:has(.visionneuse-real:not([hidden])) { overflow: hidden; }

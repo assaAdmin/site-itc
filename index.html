@@ -26,6 +26,7 @@
       <a href="#apropos">Qui sommes-nous</a>
       <a href="#services">Services</a>
       <a href="#solutions">Solutions</a>
+      <a href="#realisations">Réalisations</a>
       <a href="#galerie">Galerie</a>
       <a href="#contact">Contact</a>
       <a href="inscription.html" class="btn btn-outline">S'inscrire</a>
@@ -720,6 +721,155 @@
 
 
 
+
+  <!-- ============================================================
+       PARTIE « NOS RÉALISATIONS » (ajoutée le 6 novembre 2026)
+       Trois applications d'Ets. ASSA, avec leurs captures d'écran.
+       Les images sont dans assets/realisations/<application>/ :
+         - nom.jpg       = grande image (vue agrandie)
+         - nom-mini.jpg  = petite image (miniature)
+       Pour ajouter une capture : copier une ligne <button …> dans
+       « realisation-miniatures » et changer le nom du fichier et le texte (alt).
+       L'agrandissement des photos est géré par js/realisations.js
+       ============================================================ -->
+  <section class="page-hero chapitre" id="realisations">
+    <div class="container">
+      <p class="eyebrow">Nos réalisations</p>
+      <h2 class="titre-chapitre">Conçu et développé à Bukavu</h2>
+      <p>Trois plateformes imaginées et construites par l’équipe d’Ets. ASSA, de l’idée jusqu’à la mise en ligne. Voici ce qu’elles font, en images.</p>
+    </div>
+  </section>
+
+  <section class="realisations">
+    <div class="container">
+
+      <!-- Réalisation 1 : Sika -->
+      <article class="realisation reveal" id="realisation-sika">
+        <div class="realisation-texte">
+          <p class="eyebrow">Commerce · En ligne</p>
+          <h3>Sika <span class="realisation-lien">sika.cd</span></h3>
+          <p class="realisation-intro">Une plateforme gratuite pour acheter et vendre partout en RDC.</p>
+          <p>À Bukavu et partout dans le pays, on achète et on vend surtout par les groupes WhatsApp et le bouche-à-oreille. Sika offre un seul endroit où chacun publie une annonce depuis son téléphone et touche les acheteurs proches de chez lui.</p>
+            <ul class="diamond-list">
+              <li>Publier une annonce en 2 étapes, avec jusqu’à 10 photos</li>
+              <li>Recherche par catégorie, province, ville et prix</li>
+              <li>Prix en USD ou en CDF</li>
+              <li>Installable sur le téléphone comme une vraie application</li>
+              <li>Outils de modération pour garder la plateforme sûre</li>
+            </ul>
+          <p class="realisation-note">100 % gratuit pour les vendeurs pendant le lancement.</p>
+          <p class="realisation-actions"><a href="https://sika.cd" target="_blank" rel="noopener" class="btn btn-primary">Essayer sika.cd</a></p>
+        </div>
+          <div class="realisation-media" data-galerie>
+            <button type="button" class="realisation-principale" data-index="0" aria-label="Agrandir la photo">
+              <img src="assets/realisations/sika/sika-01.jpg" alt="Sur téléphone : accueil, recherche et publication" loading="lazy" width="1600" height="980">
+            </button>
+            <div class="realisation-miniatures">
+              <button type="button" data-index="0" data-grand="assets/realisations/sika/sika-01.jpg"><img src="assets/realisations/sika/sika-01-mini.jpg" alt="Sur téléphone : accueil, recherche et publication" loading="lazy"></button>
+              <button type="button" data-index="1" data-grand="assets/realisations/sika/sika-02.jpg"><img src="assets/realisations/sika/sika-02-mini.jpg" alt="Sur ordinateur et sur téléphone" loading="lazy"></button>
+              <button type="button" data-index="2" data-grand="assets/realisations/sika/sika-03.jpg"><img src="assets/realisations/sika/sika-03-mini.jpg" alt="Recherche par catégorie, ville et prix" loading="lazy"></button>
+              <button type="button" data-index="3" data-grand="assets/realisations/sika/sika-04.jpg"><img src="assets/realisations/sika/sika-04-mini.jpg" alt="Publier une annonce en 2 étapes" loading="lazy"></button>
+              <button type="button" data-index="4" data-grand="assets/realisations/sika/sika-05.jpg"><img src="assets/realisations/sika/sika-05-mini.jpg" alt="Installée comme une application sur le téléphone" loading="lazy"></button>
+            </div>
+            <p class="realisation-compteur">5 captures · touchez une image pour l’agrandir</p>
+          </div>
+      </article>
+
+      <!-- Réalisation 2 : GestaConta -->
+      <article class="realisation inverse reveal" id="realisation-gestaconta">
+        <div class="realisation-texte">
+          <p class="eyebrow">Gestion de commerce · En service</p>
+          <h3>GestaConta <span class="realisation-lien">gestaconta.web.app</span></h3>
+          <p class="realisation-intro">La gestion simple pour les boutiques, pharmacies, quincailleries et agences.</p>
+          <p>Beaucoup de commerces suivent encore leurs ventes, leur stock et leur caisse dans un cahier : le vrai bénéfice reste inconnu et le stock s’épuise sans prévenir. GestaConta met tout cela sur le téléphone et l’ordinateur.</p>
+            <ul class="diamond-list">
+              <li>Caisse : vendre en quelques gestes, avec reçu imprimé</li>
+              <li>Prix et caisse en USD et en CDF, au taux du jour</li>
+              <li>Suivi du stock avec alertes quand il devient bas</li>
+              <li>Paiement en espèces, Mobile Money, carte ou crédit</li>
+              <li>Rapports des ventes, graphiques et bénéfice estimé</li>
+              <li>Messages SMS et WhatsApp aux clients : arrivages, promotions, fêtes</li>
+            </ul>
+          <p class="realisation-note">Notre devise : « Gérez en confiance. »</p>
+          <p class="realisation-actions"><a href="https://wa.me/243994201684?text=Bonjour%2C%20je%20souhaite%20une%20d%C3%A9monstration%20de%20GestaConta." target="_blank" rel="noopener" class="btn btn-primary">Demander une démo</a> <a href="https://gestaconta.web.app" target="_blank" rel="noopener" class="btn btn-outline">Voir GestaConta</a></p>
+        </div>
+          <div class="realisation-media" data-galerie>
+            <button type="button" class="realisation-principale" data-index="0" aria-label="Agrandir la photo">
+              <img src="assets/realisations/gestaconta/gestaconta-01.jpg" alt="Suivi du stock, avec alertes de rupture" loading="lazy" width="1600" height="980">
+            </button>
+            <div class="realisation-miniatures">
+              <button type="button" data-index="0" data-grand="assets/realisations/gestaconta/gestaconta-01.jpg"><img src="assets/realisations/gestaconta/gestaconta-01-mini.jpg" alt="Suivi du stock, avec alertes de rupture" loading="lazy"></button>
+              <button type="button" data-index="1" data-grand="assets/realisations/gestaconta/gestaconta-02.jpg"><img src="assets/realisations/gestaconta/gestaconta-02-mini.jpg" alt="Sur téléphone : ventes, produits et messages" loading="lazy"></button>
+              <button type="button" data-index="2" data-grand="assets/realisations/gestaconta/gestaconta-03.jpg"><img src="assets/realisations/gestaconta/gestaconta-03-mini.jpg" alt="Tableau des ventes en USD et en CDF" loading="lazy"></button>
+              <button type="button" data-index="3" data-grand="assets/realisations/gestaconta/gestaconta-04.jpg"><img src="assets/realisations/gestaconta/gestaconta-04-mini.jpg" alt="Faire une vente en quelques gestes" loading="lazy"></button>
+              <button type="button" data-index="4" data-grand="assets/realisations/gestaconta/gestaconta-05.jpg"><img src="assets/realisations/gestaconta/gestaconta-05-mini.jpg" alt="Reçu imprimé pour le client" loading="lazy"></button>
+              <button type="button" data-index="5" data-grand="assets/realisations/gestaconta/gestaconta-06.jpg"><img src="assets/realisations/gestaconta/gestaconta-06-mini.jpg" alt="Rapports et répartition des paiements" loading="lazy"></button>
+            </div>
+            <p class="realisation-compteur">6 captures · touchez une image pour l’agrandir</p>
+          </div>
+      </article>
+
+      <!-- Réalisation 3 : ASSA Smart School -->
+      <article class="realisation reveal" id="realisation-assa-smart-school">
+        <div class="realisation-texte">
+          <p class="eyebrow">Éducation et santé · Recherche de partenaires</p>
+          <h3>ASSA Smart School</h3>
+          <p class="realisation-intro">L’école comme premier point de veille sanitaire dans l’Est de la RDC.</p>
+          <p>Ebola, mpox, choléra, rougeole : les épidémies se suivent. Chaque matin, des milliers d’enfants passent la grille de leur école. Avec le bon outil, ce passage devient un point d’alerte précieux.</p>
+            <ul class="diamond-list">
+              <li>Dépistage à l’entrée (température et symptômes), avec une décision tracée : entrée, infirmerie ou retour à la maison</li>
+              <li>Alertes automatiques quand plusieurs cas apparaissent dans une même classe</li>
+              <li>Tableau de bord du partenaire santé : carte des écoles, courbe épidémique, zones et aires de santé</li>
+              <li>Téléconsultation et suivi des cas</li>
+              <li>Présences en temps réel avec la carte ASSA-ID, SMS aux parents, bulletins au format officiel RDC</li>
+              <li>Supervision centrale des écoles et des équipements</li>
+            </ul>
+          <p class="realisation-note">Confidentialité dès la conception : le partenaire ne voit aucun nom d’enfant, seulement des chiffres groupés. Aucun diagnostic : l’outil signale, un professionnel de santé décide. Captures en mode démonstration, données fictives.</p>
+          <p>Nous cherchons des partenaires : ONG de santé, agences des Nations unies, bailleurs, chercheurs, opérateurs télécoms, fabricants d’équipements, écoles et réseaux scolaires.</p>
+          <p class="realisation-actions"><a href="mailto:etsassa.itc@gmail.com?subject=Partenariat%20ASSA%20Smart%20School" class="btn btn-primary">Devenir partenaire</a> <a href="https://wa.me/243994201684?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20ASSA%20Smart%20School." target="_blank" rel="noopener" class="btn btn-outline">+243 994 201 684</a></p>
+        </div>
+          <div class="realisation-media" data-galerie>
+            <button type="button" class="realisation-principale" data-index="0" aria-label="Agrandir la photo">
+              <img src="assets/realisations/assa-smart-school/sante-01-vue-reseau.jpg" alt="Partenaire santé : vue du réseau d’écoles" loading="lazy" width="1600" height="980">
+            </button>
+            <div class="realisation-miniatures">
+              <button type="button" data-index="0" data-grand="assets/realisations/assa-smart-school/sante-01-vue-reseau.jpg"><img src="assets/realisations/assa-smart-school/sante-01-vue-reseau-mini.jpg" alt="Partenaire santé : vue du réseau d’écoles" loading="lazy"></button>
+              <button type="button" data-index="1" data-grand="assets/realisations/assa-smart-school/sante-02-tendances-symptomes.jpg"><img src="assets/realisations/assa-smart-school/sante-02-tendances-symptomes-mini.jpg" alt="Partenaire santé : tendances des symptômes" loading="lazy"></button>
+              <button type="button" data-index="2" data-grand="assets/realisations/assa-smart-school/sante-03-carte-comparaison.jpg"><img src="assets/realisations/assa-smart-school/sante-03-carte-comparaison-mini.jpg" alt="Partenaire santé : carte et comparaison des écoles" loading="lazy"></button>
+              <button type="button" data-index="3" data-grand="assets/realisations/assa-smart-school/sante-04-courbe-epidemique.jpg"><img src="assets/realisations/assa-smart-school/sante-04-courbe-epidemique-mini.jpg" alt="Partenaire santé : courbe épidémique" loading="lazy"></button>
+              <button type="button" data-index="4" data-grand="assets/realisations/assa-smart-school/sante-05-reponse-alertes.jpg"><img src="assets/realisations/assa-smart-school/sante-05-reponse-alertes-mini.jpg" alt="Partenaire santé : réponse aux alertes" loading="lazy"></button>
+              <button type="button" data-index="5" data-grand="assets/realisations/assa-smart-school/sante-06-zones-de-sante.jpg"><img src="assets/realisations/assa-smart-school/sante-06-zones-de-sante-mini.jpg" alt="Partenaire santé : zones et aires de santé" loading="lazy"></button>
+              <button type="button" data-index="6" data-grand="assets/realisations/assa-smart-school/sante-07-detail-par-ecole.jpg"><img src="assets/realisations/assa-smart-school/sante-07-detail-par-ecole-mini.jpg" alt="Partenaire santé : détail par école" loading="lazy"></button>
+              <button type="button" data-index="7" data-grand="assets/realisations/assa-smart-school/directeur-01-tableau-de-bord.jpg"><img src="assets/realisations/assa-smart-school/directeur-01-tableau-de-bord-mini.jpg" alt="Directeur : tableau de bord" loading="lazy"></button>
+              <button type="button" data-index="8" data-grand="assets/realisations/assa-smart-school/directeur-02-activite-du-jour.jpg"><img src="assets/realisations/assa-smart-school/directeur-02-activite-du-jour-mini.jpg" alt="Directeur : activité du jour" loading="lazy"></button>
+              <button type="button" data-index="9" data-grand="assets/realisations/assa-smart-school/directeur-03-sante-depistage.jpg"><img src="assets/realisations/assa-smart-school/directeur-03-sante-depistage-mini.jpg" alt="Directeur : dépistage à l’entrée" loading="lazy"></button>
+              <button type="button" data-index="10" data-grand="assets/realisations/assa-smart-school/directeur-04-sante-liste.jpg"><img src="assets/realisations/assa-smart-school/directeur-04-sante-liste-mini.jpg" alt="Directeur : liste des cas à vérifier" loading="lazy"></button>
+              <button type="button" data-index="11" data-grand="assets/realisations/assa-smart-school/directeur-05-presences.jpg"><img src="assets/realisations/assa-smart-school/directeur-05-presences-mini.jpg" alt="Directeur : présences en temps réel" loading="lazy"></button>
+              <button type="button" data-index="12" data-grand="assets/realisations/assa-smart-school/directeur-06-presences-liste.jpg"><img src="assets/realisations/assa-smart-school/directeur-06-presences-liste-mini.jpg" alt="Directeur : liste des présences" loading="lazy"></button>
+              <button type="button" data-index="13" data-grand="assets/realisations/assa-smart-school/directeur-07-bulletin-rdc.jpg"><img src="assets/realisations/assa-smart-school/directeur-07-bulletin-rdc-mini.jpg" alt="Directeur : bulletin au format officiel RDC" loading="lazy"></button>
+              <button type="button" data-index="14" data-grand="assets/realisations/assa-smart-school/assa-01-centre-de-controle.jpg"><img src="assets/realisations/assa-smart-school/assa-01-centre-de-controle-mini.jpg" alt="Ets. ASSA : centre de contrôle" loading="lazy"></button>
+              <button type="button" data-index="15" data-grand="assets/realisations/assa-smart-school/assa-02-activite-equipements.jpg"><img src="assets/realisations/assa-smart-school/assa-02-activite-equipements-mini.jpg" alt="Ets. ASSA : activité des équipements" loading="lazy"></button>
+              <button type="button" data-index="16" data-grand="assets/realisations/assa-smart-school/assa-03-equipements-flux-direct.jpg"><img src="assets/realisations/assa-smart-school/assa-03-equipements-flux-direct-mini.jpg" alt="Ets. ASSA : équipements en direct" loading="lazy"></button>
+              <button type="button" data-index="17" data-grand="assets/realisations/assa-smart-school/assa-04-ecoles-du-reseau.jpg"><img src="assets/realisations/assa-smart-school/assa-04-ecoles-du-reseau-mini.jpg" alt="Ets. ASSA : écoles du réseau" loading="lazy"></button>
+            </div>
+            <p class="realisation-compteur">18 captures · touchez une image pour l’agrandir</p>
+          </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Fenêtre d'agrandissement des photos (une seule pour toute la page) -->
+  <div class="visionneuse-real" id="visionneuse-real" hidden role="dialog" aria-modal="true" aria-label="Photo agrandie">
+    <button type="button" class="vr-fermer" aria-label="Fermer">✕</button>
+    <button type="button" class="vr-fleche vr-prec" aria-label="Photo précédente">‹</button>
+    <figure>
+      <img alt="">
+      <figcaption><span class="vr-legende"></span> <span class="vr-numero"></span></figcaption>
+    </figure>
+    <button type="button" class="vr-fleche vr-suiv" aria-label="Photo suivante">›</button>
+  </div>
+
   <!-- ============================================================
        PARTIE « GALERIE »
        ============================================================ -->
@@ -836,6 +986,7 @@
           <li><a href="#apropos">Qui sommes-nous</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#solutions">Nos solutions</a></li>
+          <li><a href="#realisations">Nos réalisations</a></li>
           <li><a href="#galerie">Galerie</a></li>
           <li><a href="inscription.html">S'inscrire</a></li>
         </ul>
@@ -868,6 +1019,7 @@
 <script src="js/stats.js"></script>
 <script src="js/effets.js"></script>
 <script src="js/gallery.js"></script>
+<script src="js/realisations.js"></script>
 <script src="js/chat-widgets.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
